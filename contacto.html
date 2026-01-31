@@ -101,6 +101,8 @@
 </button>
 </div>
 </div>
+<!-- Mobile Menu Backdrop -->
+<div id="mobile-menu-backdrop" class="lg:hidden fixed inset-0 top-20 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-[100]"></div>
 <!-- Mobile Menu Panel -->
 <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-black transform translate-x-full transition-transform duration-300 z-[110]">
 <nav class="flex flex-col items-center justify-center h-full gap-8 pb-20">
@@ -581,29 +583,43 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
 const mainHeader = document.getElementById('main-header');
 const menuSpans = mobileMenuBtn.querySelectorAll('span');
 
+function closeMenu() {
+    mobileMenu.classList.add('translate-x-full');
+    mobileMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
+    mobileMenuBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+    menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
+    menuSpans[1].classList.remove('opacity-0');
+    menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+    mainHeader.classList.remove('bg-black');
+    mainHeader.classList.add('bg-black/40');
+    document.body.style.overflow = '';
+}
+
+function openMenu() {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+    mobileMenuBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+    menuSpans[0].classList.add('rotate-45', 'translate-y-2');
+    menuSpans[1].classList.add('opacity-0');
+    menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
+    mainHeader.classList.remove('bg-black/40');
+    mainHeader.classList.add('bg-black');
+    document.body.style.overflow = 'hidden';
+}
+
 mobileMenuBtn.addEventListener('click', () => {
     const isOpen = !mobileMenu.classList.contains('translate-x-full');
-
     if (isOpen) {
-        mobileMenu.classList.add('translate-x-full');
-        menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
-        menuSpans[1].classList.remove('opacity-0');
-        menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
-        mainHeader.classList.remove('bg-black');
-        mainHeader.classList.add('bg-black/40');
-        document.body.style.overflow = '';
+        closeMenu();
     } else {
-        mobileMenu.classList.remove('translate-x-full');
-        menuSpans[0].classList.add('rotate-45', 'translate-y-2');
-        menuSpans[1].classList.add('opacity-0');
-        menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
-        mainHeader.classList.remove('bg-black/40');
-        mainHeader.classList.add('bg-black');
-        document.body.style.overflow = 'hidden';
+        openMenu();
     }
 });
+
+mobileMenuBackdrop.addEventListener('click', closeMenu);
 </script>
 </body></html>
