@@ -244,13 +244,45 @@
 </div>
 </div>
 </section>
-<section class="py-64 bg-black relative">
-<div class="max-w-6xl mx-auto px-10 text-center space-y-4">
-<h2 class="text-5xl md:text-7xl font-black glitch-text leading-tight">
-                    El cáncer es una enfermedad genética. <br/>
-                    La cura será genética. <br/>
-<span class="opacity-30">Y será acelerada por IA.</span>
-</h2>
+<section class="py-64 bg-black relative overflow-hidden" data-mantra-section>
+<!-- Background Effects -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.08)_0%,_transparent_60%)]"></div>
+<div class="absolute inset-0 grid-overlay opacity-10 pointer-events-none"></div>
+
+<!-- Animated Particles -->
+<div class="mantra-particles absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="mantra-particle"></div>
+    <div class="mantra-particle"></div>
+    <div class="mantra-particle"></div>
+    <div class="mantra-particle"></div>
+    <div class="mantra-particle"></div>
+</div>
+
+<div class="max-w-6xl mx-auto px-10 text-center relative z-10">
+    <!-- Main Text Container -->
+    <div class="mantra-container space-y-6">
+        <!-- Line 1 -->
+        <h2 class="mantra-line text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-ultra-tight scroll-reveal stagger-1">
+            El cáncer es una enfermedad <span class="mantra-highlight">genética</span>.
+        </h2>
+
+        <!-- Line 2 with Target Effect -->
+        <h2 class="mantra-line text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-ultra-tight scroll-reveal stagger-2">
+            La cura ser<span class="mantra-target-wrapper"><span class="mantra-target-circle"></span>á</span> <span class="mantra-highlight">genética</span>.
+        </h2>
+
+        <!-- Line 3 - IA Highlight -->
+        <h2 class="mantra-line mantra-line-ia text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-ultra-tight scroll-reveal stagger-3">
+            Y será acelerada por <span class="mantra-ia-text">IA</span>.
+        </h2>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="mt-16 flex justify-center items-center gap-4 scroll-reveal stagger-4">
+        <div class="h-px w-20 bg-gradient-to-r from-transparent to-white/30"></div>
+        <div class="mantra-dna-icon size-3 rounded-full bg-white/20 animate-pulse"></div>
+        <div class="h-px w-20 bg-gradient-to-l from-transparent to-white/30"></div>
+    </div>
 </div>
 </section>
 <section class="py-40 border-t border-white/5">
