@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ONCOLOGIA | Medicina de Precision AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-dark": "#050505",
+                        "cyber-gray": "#1A1A1A"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "ultra-tight": "-0.04em",
+                        "super-wide": "0.3em"
+                    },
+                    backgroundImage: {
+                        'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display antialiased bg-background-dark text-white overflow-x-hidden font-light;
+            }
+            h1, h2, h3, h4 { @apply font-black tracking-ultra-tight; }
+        }
+        .glass-panel {
+            @apply backdrop-blur-xl bg-white/[0.03] border border-white/10;
+        }
+        .neon-glow-white {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.4);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255,255,255,0.4);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.01) 50%);
+            background-size: 100% 4px;
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .text-gradient-white {
+            background: linear-gradient(to bottom, #fff 30%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .vertical-line-glow {
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="fixed inset-0 pointer-events-none opacity-[0.05] z-[100] bg-noise"></div>
+<div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
+<div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
+<header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-10 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
+</div>
+<h1 class="text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+</a>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="plataforma.html">Plataforma</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover-underline" href="precision.html">Precision</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
+</nav>
+<a href="contacto.html" class="border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Contacto</a>
+</div>
+</header>
+<section class="relative min-h-screen flex items-center justify-center pt-20 px-10">
+<div class="max-w-5xl mx-auto text-center relative z-10 space-y-10">
+<div class="inline-flex items-center px-5 py-1.5 glass-panel rounded-full border-white/20 scroll-reveal">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/70">Medicina Personalizada</p>
+</div>
+<h1 class="text-6xl md:text-8xl leading-[0.9] font-black tracking-tighter scroll-reveal stagger-1">
+                Cada paciente. <br/> Cada tumor. <br/>
+<span class="text-gradient-white animate-pulse-text">Un tratamiento unico.</span>
+</h1>
+<div class="max-w-2xl mx-auto glass-panel p-6 border-l-4 border-l-white text-left">
+<p class="text-lg text-white/60 leading-relaxed font-light">
+                    Implementamos analisis genomico impulsado por IA para identificar vulnerabilidades especificas en el perfil molecular de cada paciente, acelerando la toma de decisiones clinicas con evidencia global.
+                </p>
+</div>
+</div>
+</section>
+<section class="py-40 relative">
+<div class="max-w-4xl mx-auto px-10">
+<h2 class="text-4xl text-center mb-32 uppercase tracking-widest text-white/40 scroll-reveal">Protocolo de Precision</h2>
+<div class="relative" data-timeline>
+<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-white/10 vertical-line-glow timeline-progress-line" style="height: 0;"></div>
+<div class="space-y-32">
+<div class="relative flex items-center justify-between timeline-step scroll-reveal" style="opacity: 0; transform: translateY(20px);">
+<div class="w-[45%] text-right pr-12">
+<h4 class="text-xl mb-2">Muestra</h4>
+<p class="text-sm text-white/40">Recoleccion de tejido tumoral o biopsia liquida bajo estandares internacionales.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 size-4 bg-white/20 border border-white/40 rounded-full z-10 step-number"></div>
+<div class="w-[45%] flex items-center">
+<span class="text-5xl font-black text-white/5 italic">01</span>
+</div>
+</div>
+<div class="relative flex items-center justify-between">
+<div class="w-[45%]"></div>
+<div class="absolute left-1/2 -translate-x-1/2 size-4 bg-white/20 border border-white/40 rounded-full z-10"></div>
+<div class="w-[45%] pl-12">
+<h4 class="text-xl mb-2">Secuenciacion</h4>
+<p class="text-sm text-white/40">Next Generation Sequencing (NGS) de alta profundidad para cobertura completa.</p>
+<span class="text-5xl font-black text-white/5 italic absolute right-0 top-0">02</span>
+</div>
+</div>
+<div class="relative flex items-center justify-between">
+<div class="w-[45%] text-right pr-12">
+<h4 class="text-2xl neon-glow-white mb-2 uppercase">Analisis IA</h4>
+<p class="text-sm text-white/80">Procesamiento mediante redes neuronales para deteccion de variantes raras y firmas moleculares.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 size-10 bg-white shadow-[0_0_30px_white] rounded-full z-10 animate-pulse flex items-center justify-center">
+<div class="size-4 bg-black"></div>
+</div>
+<div class="w-[45%] flex items-center">
+<span class="text-7xl font-black text-white/10 italic">03</span>
+</div>
+</div>
+<div class="relative flex items-center justify-between">
+<div class="w-[45%]"></div>
+<div class="absolute left-1/2 -translate-x-1/2 size-4 bg-white/20 border border-white/40 rounded-full z-10"></div>
+<div class="w-[45%] pl-12">
+<h4 class="text-xl mb-2">Matching</h4>
+<p class="text-sm text-white/40">Cruce de datos con bases de datos clinicas, farmacos aprobados y ensayos activos.</p>
+<span class="text-5xl font-black text-white/5 italic absolute right-0 top-0">04</span>
+</div>
+</div>
+<div class="relative flex items-center justify-between">
+<div class="w-[45%] text-right pr-12">
+<h4 class="text-xl mb-2">Reporte</h4>
+<p class="text-sm text-white/40">Informe detallado para el oncologo con niveles de evidencia terapeutica.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 size-4 bg-white/20 border border-white/40 rounded-full z-10"></div>
+<div class="w-[45%] flex items-center">
+<span class="text-5xl font-black text-white/5 italic">05</span>
+</div>
+</div>
+<div class="relative flex items-center justify-between">
+<div class="w-[45%]"></div>
+<div class="absolute left-1/2 -translate-x-1/2 size-4 bg-white/20 border border-white/40 rounded-full z-10"></div>
+<div class="w-[45%] pl-12">
+<h4 class="text-xl mb-2">Seguimiento</h4>
+<p class="text-sm text-white/40">Monitorizacion de la respuesta y ajuste dinamico segun evolucion genomica.</p>
+<span class="text-5xl font-black text-white/5 italic absolute right-0 top-0">06</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-black">
+<div class="max-w-[1440px] mx-auto px-10">
+<h2 class="text-3xl mb-20 tracking-tighter uppercase scroll-reveal">Biomarcadores y Analisis</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-biomarker-matrix data-stagger-children data-stagger-delay="0.08">
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">genetics</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">Mutaciones Somaticas</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">content_copy</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">CNV (Copias)</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">join_inner</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">Fusiones de Genes</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">bar_chart</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">TMB (Carga Mutacional)</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">fingerprint</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">MSI (Inestabilidad)</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">rebase_edit</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">Variantes Germinales</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">matter</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">Farmacogenomica</h5>
+</div>
+<div class="glass-panel p-8 group hover:bg-white/[0.05] transition-all border-white/5 biomarker-item hover-lift hover-glow scan-line-effect" style="opacity: 0; transform: scale(0.9);">
+<span class="material-symbols-outlined mb-6 text-white/40 group-hover:text-white">clinical_notes</span>
+<h5 class="text-xs font-bold uppercase tracking-widest">Firmas de ARN</h5>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-[#080808]">
+<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-6xl font-black mb-6">Herramientas para <br/><span class="neon-glow-white">oncologos</span></h2>
+<p class="text-xl text-white/40 font-light">Potenciamos la practica clinica con datos procesables, permitiendo que el medico se enfoque en lo humano mientras la IA maneja la complejidad genomica.</p>
+</div>
+<div class="glass-panel p-12 border-l-4 border-white space-y-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white">check_circle</span>
+<p class="text-lg font-light">Reportes claros y visuales orientados a la clinica.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white">check_circle</span>
+<p class="text-lg font-light">Matching automatizado con guias NCCN y ESMO.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white">check_circle</span>
+<p class="text-lg font-light">Buscador de ensayos clinicos por perfil molecular.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white">check_circle</span>
+<p class="text-lg font-light">Panel de discusion multidisciplinar digital.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="grid lg:grid-cols-2 gap-10">
+<div class="glass-panel p-12 border-l-4 border-red-500/50">
+<h4 class="text-[11px] font-bold tracking-[0.5em] text-red-500 mb-8">EL DESAFIO</h4>
+<p class="text-2xl font-light leading-relaxed text-white/60 italic">
+                        "La fragmentacion de datos y la complejidad del analisis genomico retrasan el inicio del tratamiento adecuado en mas de un 40% de los casos."
+                    </p>
+</div>
+<div class="glass-panel p-12 border-l-4 border-white">
+<h4 class="text-[11px] font-bold tracking-[0.5em] text-white/80 mb-8">NUESTRA PROPUESTA</h4>
+<p class="text-2xl font-light leading-relaxed">
+                        Integramos un ecosistema de precision que centraliza el diagnostico molecular, reduciendo los tiempos de respuesta de semanas a dias laborables.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-black text-center">
+<div class="max-w-4xl mx-auto px-10 space-y-20">
+<div class="space-y-8">
+<h2 class="text-5xl">Cada tumor es unico. <br/> Tu tratamiento tambien deberia serlo.</h2>
+<div class="grid md:grid-cols-3 gap-6 text-left mt-16">
+<div class="glass-panel p-8">
+<span class="text-4xl font-black text-white/10 mb-6 block">01</span>
+<p class="text-sm font-light">Entendimiento profundo de tu diagnostico genomico.</p>
+</div>
+<div class="glass-panel p-8">
+<span class="text-4xl font-black text-white/10 mb-6 block">02</span>
+<p class="text-sm font-light">Acceso a terapias dirigidas e inmunoterapia avanzada.</p>
+</div>
+<div class="glass-panel p-8">
+<span class="text-4xl font-black text-white/10 mb-6 block">03</span>
+<p class="text-sm font-light">Segunda opinion basada en evidencia molecular global.</p>
+</div>
+</div>
+</div>
+<div class="space-y-10">
+<p class="text-[10px] font-bold uppercase tracking-[0.5em] text-white/30">Areas de Especializacion</p>
+<div class="flex flex-wrap justify-center gap-3">
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Pulmon</div>
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Mama</div>
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Colorrectal</div>
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Prostata</div>
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Pancreas</div>
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Melanoma</div>
+<div class="glass-panel px-6 py-2 text-[11px] font-bold uppercase tracking-widest text-white/60">Hematologia</div>
+</div>
+</div>
+<div class="glass-panel p-6 flex items-start gap-4 text-left max-w-2xl mx-auto border-white/5">
+<span class="material-symbols-outlined text-white/40">info</span>
+<p class="text-[10px] font-light leading-relaxed text-white/40 uppercase tracking-widest">
+                    Nota: El analisis de precision es una herramienta complementaria. La decision final del tratamiento corresponde exclusivamente a su oncologo tratante.
+                </p>
+</div>
+</div>
+</section>
+<section class="py-64 relative overflow-hidden text-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08)_0%,_transparent_70%)]"></div>
+<div class="max-w-4xl mx-auto px-10 relative z-10 space-y-12">
+<h2 class="text-5xl md:text-7xl">El tratamiento correcto existe.</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a href="contacto.html" class="bg-white text-black px-12 py-5 text-[11px] font-black uppercase tracking-[0.3em] hover:scale-105 transition-all shadow-[0_0_50px_rgba(255,255,255,0.3)]">
+                    Soy Oncologo
+                </a>
+<a href="contacto.html" class="glass-panel px-12 py-5 text-[11px] font-black uppercase tracking-[0.3em] hover:bg-white/5 transition-all">
+                    Soy Paciente
+                </a>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark border-t border-white/5 py-24 px-10">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20">
+<div class="col-span-2 space-y-8">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+</div>
+<span class="text-xl font-black uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></span>
+</a>
+<p class="text-white/40 font-light text-lg max-w-md italic">
+                    "Redefiniendo el estandar de cuidado oncologico a traves de la inteligencia genomica."
+                </p>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Navegacion</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="plataforma.html">Plataforma AI</a>
+<a class="hover:text-white" href="precision.html">Servicios Clinicos</a>
+<a class="hover:text-white" href="contacto.html">Para Pacientes</a>
+<a class="hover:text-white" href="contacto.html">Privacidad de Datos</a>
+</nav>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Legal</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="contacto.html">Terminos y Condiciones</a>
+<a class="hover:text-white" href="nosotros.html">Certificaciones ISO</a>
+<a class="hover:text-white" href="contacto.html">Consentimiento</a>
+<a class="hover:text-white" href="contacto.html">Contacto</a>
+</nav>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-white/20">
+<p>© 2024 Oncologia AI Precision. Todos los derechos reservados.</p>
+<div class="flex gap-12">
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">ResearchGate</a>
+</div>
+</div>
+</footer>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loading-dna"></div>
+</div>
+
+<script src="assets/js/oncologia-core.js"></script>
+<script src="assets/js/dna-animation.js"></script>
+<script src="assets/js/page-effects.js"></script>
+</body></html>

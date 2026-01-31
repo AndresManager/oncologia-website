@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ONCOLOGIA | Contacto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-dark": "#050505",
+                        "cyber-gray": "#1A1A1A"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "ultra-tight": "-0.04em",
+                        "super-wide": "0.3em"
+                    },
+                    backgroundImage: {
+                        'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display antialiased bg-background-dark text-white overflow-x-hidden font-light;
+            }
+            h1, h2, h3, h4 { @apply font-black tracking-ultra-tight; }
+        }
+        .glass-panel {
+            @apply backdrop-blur-xl bg-white/[0.03] border border-white/10;
+        }
+        .cyber-border {
+            @apply border border-white/10 relative;
+        }
+        .cyber-border::before {
+            content: '';
+            @apply absolute -top-px -left-px w-2 h-2 border-t border-l border-white/40;
+        }
+        .cyber-border::after {
+            content: '';
+            @apply absolute -bottom-px -right-px w-2 h-2 border-b border-r border-white/40;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.005) 50%);
+            background-size: 100% 4px;
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .terminal-text {
+            @apply font-mono text-[10px] text-white/40 tracking-wider;
+        }
+        .glow-shadow {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="fixed inset-0 pointer-events-none opacity-[0.05] z-[100] bg-noise"></div>
+<div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
+<div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
+<header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-10 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
+</div>
+<h1 class="text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+</a>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="plataforma.html">Plataforma</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="precision.html">Precision</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
+</nav>
+<a href="index.html" class="border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Inicio</a>
+</div>
+</header>
+<main class="relative z-10 pt-32">
+<section class="max-w-[1440px] mx-auto px-10 py-20 grid lg:grid-cols-[40%_60%] gap-20 items-start">
+<div class="space-y-8">
+<span class="inline-block border border-white/20 px-4 py-1 text-[10px] font-black uppercase tracking-[0.4em] bg-white/5 scroll-reveal">Conectemos</span>
+<h1 class="text-6xl md:text-7xl glow-text leading-[1.1] scroll-reveal stagger-1">Hablemos de tu proyecto.</h1>
+<p class="text-xl text-white/60 leading-relaxed font-light max-w-md scroll-reveal stagger-2">
+                    Inicia una colaboracion para acelerar el descubrimiento de farmacos o implementar medicina de precision en tu institucion.
+                </p>
+<div class="pt-10 space-y-4 scroll-reveal stagger-3">
+<p class="terminal-text">SESSION_STATUS: READY</p>
+<p class="terminal-text">CONNECTION: ENCRYPTED_AES256</p>
+</div>
+</div>
+<div class="glass-panel cyber-border p-10 md:p-16 scroll-reveal-right hover-glow">
+<!-- Formulario funcional con Formspree - Reemplaza YOUR_FORM_ID con tu ID de Formspree -->
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-8" id="contact-form" data-validate-form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="nombre">Nombre completo</label>
+<input id="nombre" name="nombre" required class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="email">Email Corporativo</label>
+<input id="email" name="email" required class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="j.doe@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="empresa">Empresa / Institucion</label>
+<input id="empresa" name="empresa" class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="BioTech Inc." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="telefono">Telefono</label>
+<input id="telefono" name="telefono" class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="+57 --- --- ----" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="tipo_consulta">Tipo de Consulta</label>
+<select id="tipo_consulta" name="tipo_consulta" required class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light appearance-none transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]">
+<option value="" class="bg-black">Seleccionar opcion...</option>
+<option value="demo" class="bg-black">Solicitud de Demo</option>
+<option value="partnership" class="bg-black">Drug Discovery Partnership</option>
+<option value="clinica" class="bg-black">Implementacion Clinica</option>
+<option value="investigacion" class="bg-black">Investigacion Genomica</option>
+<option value="otro" class="bg-black">Otro</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="mensaje">Mensaje</label>
+<textarea id="mensaje" name="mensaje" required class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="Describe brevemente tus objetivos..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-3">
+<input id="privacidad" name="privacidad" required class="size-4 bg-transparent border-white/20 text-black focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<label for="privacidad" class="text-[10px] text-white/40 uppercase tracking-widest">Acepto la politica de tratamiento de datos genomicos y privacidad.</label>
+</div>
+<button class="w-full bg-white text-black py-6 font-black uppercase tracking-[0.4em] text-xs hover:bg-neutral-200 transition-all glow-shadow btn-magnetic btn-ripple animate-pulse-glow" type="submit">
+                        Enviar Solicitud
+                    </button>
+</form>
+<!-- Mensaje de exito (oculto por defecto) -->
+<div id="success-message" class="hidden text-center py-12 space-y-6">
+<span class="material-symbols-outlined text-6xl text-white">check_circle</span>
+<h3 class="text-2xl font-black">Mensaje Enviado</h3>
+<p class="text-white/60">Gracias por contactarnos. Nuestro equipo se comunicara contigo pronto.</p>
+<a href="index.html" class="inline-block glass-panel px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition-all">Volver al Inicio</a>
+</div>
+</div>
+</section>
+<section class="py-32 border-t border-white/5">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="grid md:grid-cols-3 gap-10" data-stagger-children data-stagger-delay="0.15">
+<a href="mailto:partners@oncologia.ai" class="glass-panel p-10 cyber-border group hover:bg-white/5 transition-colors scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl mb-8 block text-white/40 group-hover:text-white transition-colors">handshake</span>
+<h3 class="text-xl mb-4">Partnerships</h3>
+<p class="text-white/40 text-sm mb-6 leading-relaxed">Colaboraciones estrategicas con farmaceuticas y centros de I+D.</p>
+<span class="text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-1">partners@oncologia.ai</span>
+</a>
+<a href="mailto:clinical@oncologia.ai" class="glass-panel p-10 cyber-border group hover:bg-white/5 transition-colors scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl mb-8 block text-white/40 group-hover:text-white transition-colors">medical_services</span>
+<h3 class="text-xl mb-4">Clinicas</h3>
+<p class="text-white/40 text-sm mb-6 leading-relaxed">Soporte tecnico y comercial para hospitales e instituciones medicas.</p>
+<span class="text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-1">clinical@oncologia.ai</span>
+</a>
+<a href="mailto:press@oncologia.ai" class="glass-panel p-10 cyber-border group hover:bg-white/5 transition-colors scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl mb-8 block text-white/40 group-hover:text-white transition-colors">campaign</span>
+<h3 class="text-xl mb-4">Prensa</h3>
+<p class="text-white/40 text-sm mb-6 leading-relaxed">Consultas de medios, activos de marca y comunicados oficiales.</p>
+<span class="text-[10px] font-bold uppercase tracking-widest border-b border-white/20 pb-1">press@oncologia.ai</span>
+</a>
+</div>
+</div>
+</section>
+<section class="py-32 bg-black border-y border-white/5">
+<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-10 scroll-reveal-left">
+<div class="space-y-4">
+<h2 class="text-5xl glow-text">Medellin, Colombia</h2>
+<p class="text-white/40 font-mono text-sm tracking-widest">HQ &amp; MOLECULAR HUB</p>
+</div>
+<div class="space-y-6 text-xl text-white/60 font-light border-l border-white/20 pl-8">
+<p>Complejo Ruta N, Torre B</p>
+<p>Calle 67 N 52-20</p>
+<p>Antioquia, 050010</p>
+</div>
+<div class="flex gap-10">
+<div>
+<p class="text-[10px] font-bold text-white/20 uppercase tracking-widest mb-1">Operaciones</p>
+<p class="text-sm">Lun - Vie / 08:00 - 18:00</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-white/20 uppercase tracking-widest mb-1">Telefono</p>
+<p class="text-sm">+57 (4) 555 0192</p>
+</div>
+</div>
+</div>
+<div class="aspect-video glass-panel cyber-border relative overflow-hidden grayscale scroll-reveal-right hover-glow">
+<div class="absolute inset-0 grid-overlay opacity-30"></div>
+<img alt="Map Location" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYjLHmCM1xy3TJnfYlYbjT5Oednu06F7JR_4Sx8wUS3lLmW06cl53BqW8RHrEiQhZBBWujhp1lYGzKe41Q4PVODMwxpwTlyGxdkCuGEoJBn8uGw4Lk97n2Q-BgrullJ3hUA94Z0ZPpPgK9rAwmUhegNQ1s8VVolg0Bt4Za_mV2GGOFheX3s8pOnPGUKbMZiE0BaydNqUWrKSWKzygav5WuF6lsrg-aQ3lOCuEjRRMiRItoc2apR4xGxgRi9VdzGOgs_f1Y68SMT4"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-2 bg-white animate-ping rounded-full"></div>
+<div class="size-2 bg-white rounded-full absolute"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32">
+<div class="max-w-4xl mx-auto px-10">
+<h2 class="text-4xl mb-16 uppercase tracking-widest text-center scroll-reveal">Preguntas Frecuentes</h2>
+<div class="space-y-4" data-faq-accordion data-stagger-children data-stagger-delay="0.1">
+<details class="group glass-panel cyber-border faq-item scroll-reveal hover-glow">
+<summary class="flex justify-between items-center p-8 cursor-pointer list-none faq-trigger">
+<span class="text-lg font-bold uppercase tracking-tight">Cual es el tiempo promedio de analisis genomico?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-8 pb-8 text-white/50 leading-relaxed font-light faq-content">
+                            Nuestros procesos automatizados por IA permiten entregar reportes de exoma completo en un promedio de 10 a 14 dias habiles, significativamente menor al promedio de la industria.
+                        </div>
+</details>
+<details class="group glass-panel cyber-border faq-item scroll-reveal hover-glow">
+<summary class="flex justify-between items-center p-8 cursor-pointer list-none faq-trigger">
+<span class="text-lg font-bold uppercase tracking-tight">Que tipos de muestras son compatibles?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-8 pb-8 text-white/50 leading-relaxed font-light faq-content">
+                            Aceptamos tejido fresco congelado, bloques de parafina (FFPE) y biopsia liquida (plasma) para perfiles tumorales. Para estudios germinales, saliva o sangre periferica.
+                        </div>
+</details>
+<details class="group glass-panel cyber-border faq-item scroll-reveal hover-glow">
+<summary class="flex justify-between items-center p-8 cursor-pointer list-none faq-trigger">
+<span class="text-lg font-bold uppercase tracking-tight">Que tipos de cancer cubre la plataforma?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-8 pb-8 text-white/50 leading-relaxed font-light faq-content">
+                            Nuestra IA esta entrenada para identificar variantes en todos los tumores solidos, con especial profundidad en cancer de mama, pulmon, colorrectal y prostata, comunes en la region.
+                        </div>
+</details>
+<details class="group glass-panel cyber-border faq-item scroll-reveal hover-glow">
+<summary class="flex justify-between items-center p-8 cursor-pointer list-none faq-trigger">
+<span class="text-lg font-bold uppercase tracking-tight">Como se garantiza la privacidad de los datos?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-8 pb-8 text-white/50 leading-relaxed font-light faq-content">
+                            Utilizamos encriptacion de grado militar AES-256. Los datos genomicos se anonimizan y almacenan en servidores locales bajo estrictos cumplimientos de la Ley de Proteccion de Datos y estandares HIPAA.
+                        </div>
+</details>
+<details class="group glass-panel cyber-border faq-item scroll-reveal hover-glow">
+<summary class="flex justify-between items-center p-8 cursor-pointer list-none faq-trigger">
+<span class="text-lg font-bold uppercase tracking-tight">Trabajan con seguros de salud?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-8 pb-8 text-white/50 leading-relaxed font-light faq-content">
+                            Contamos con convenios con las principales aseguradoras y prepagadas de Colombia y la region. Consulta con nuestro equipo comercial para verificar la cobertura de tu poliza.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<section class="py-40 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_0%,_transparent_70%)]"></div>
+<div class="max-w-4xl mx-auto px-10 text-center relative z-10 space-y-12">
+<h2 class="text-4xl font-light italic scroll-reveal">No encontraste lo que buscabas?</h2>
+<a class="inline-block glass-panel px-12 py-5 text-sm font-black uppercase tracking-[0.5em] hover:bg-white hover:text-black transition-all scroll-reveal stagger-1 btn-magnetic btn-ripple animate-pulse-glow" href="mailto:hola@oncologia.ai">
+                    Escribenos directamente
+                </a>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t border-white/5 py-24 px-10 relative z-10">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20">
+<div class="col-span-2 space-y-8">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+</div>
+<span class="text-xl font-black uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></span>
+</a>
+<p class="text-white/40 font-light text-lg max-w-md italic">
+                    "Transformando el futuro de la oncologia a traves de la inteligencia artificial y la genomica de precision."
+                </p>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Compania</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="nosotros.html">Nuestra Historia</a>
+<a class="hover:text-white" href="nosotros.html">Laboratorio</a>
+<a class="hover:text-white" href="nosotros.html">Talento</a>
+<a class="hover:text-white" href="contacto.html">Prensa</a>
+</nav>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Legal</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="contacto.html">Privacidad de Datos</a>
+<a class="hover:text-white" href="nosotros.html">Etica en IA</a>
+<a class="hover:text-white" href="contacto.html">Cumplimiento</a>
+<a class="hover:text-white" href="contacto.html">Contacto</a>
+</nav>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-white/20">
+<p>© 2024 Oncologia Company. IA impulsada por la ciencia.</p>
+<div class="flex gap-12">
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Twitter / X</a>
+<a class="hover:text-white transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+
+<script>
+// Script para manejar el envio del formulario
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    // Si usas Formspree, el formulario se enviara automaticamente
+    // Este script es para mostrar un mensaje de exito si decides manejarlo localmente
+
+    // Para pruebas sin backend, descomenta las siguientes lineas:
+    // e.preventDefault();
+    // document.getElementById('contact-form').classList.add('hidden');
+    // document.getElementById('success-message').classList.remove('hidden');
+});
+</script>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loading-dna"></div>
+</div>
+
+<script src="assets/js/oncologia-core.js"></script>
+<script src="assets/js/dna-animation.js"></script>
+<script src="assets/js/page-effects.js"></script>
+</body></html>

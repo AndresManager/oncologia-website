@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Drafts/backups
+oncologia_home_landing_page_*/
+
+# IDE
+.vscode/
+.idea/
+
+# Node (if added later)
+node_modules/

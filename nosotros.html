@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ONCOLOGIA | Nosotros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-dark": "#050505",
+                        "cyber-gray": "#1A1A1A"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "ultra-tight": "-0.04em",
+                        "super-wide": "0.3em"
+                    },
+                    backgroundImage: {
+                        'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display antialiased bg-background-dark text-white overflow-x-hidden font-light;
+            }
+            h1, h2, h3, h4 { @apply font-black tracking-ultra-tight; }
+        }
+        .glass-panel {
+            @apply backdrop-blur-xl bg-white/[0.03] border border-white/10;
+        }
+        .cyber-border {
+            @apply border border-white/10 relative;
+        }
+        .cyber-border::before {
+            content: '';
+            @apply absolute -top-px -left-px w-2 h-2 border-t border-l border-white/40;
+        }
+        .cyber-border::after {
+            content: '';
+            @apply absolute -bottom-px -right-px w-2 h-2 border-b border-r border-white/40;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.005) 50%);
+            background-size: 100% 4px;
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .terminal-text {
+            @apply font-mono text-[10px] text-white/40 tracking-wider;
+        }
+        .glitch-text {
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 255, 255, 0.75),
+                         -0.025em -0.05em 0 rgba(255, 255, 255, 0.75),
+                         0.025em 0.05em 0 rgba(255, 255, 255, 0.75);
+        }
+    </style>
+</head>
+<body>
+<div class="fixed inset-0 pointer-events-none opacity-[0.05] z-[100] bg-noise"></div>
+<div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
+<div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
+<header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-10 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
+</div>
+<h1 class="text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+</a>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="plataforma.html">Plataforma</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="precision.html">Precision</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover-underline" href="nosotros.html">Nosotros</a>
+</nav>
+<a href="contacto.html" class="border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Contacto</a>
+</div>
+</header>
+<main class="relative z-10">
+<section class="min-h-screen flex flex-col items-center justify-center px-10 text-center">
+<div class="max-w-6xl mx-auto space-y-8">
+<h1 class="text-7xl md:text-9xl font-black glow-text leading-tight scroll-reveal">Tecnologia con proposito</h1>
+<p class="text-xl md:text-2xl text-white/60 font-light max-w-3xl mx-auto leading-relaxed italic scroll-reveal stagger-1">
+                    Somos una empresa de tecnologia que existe para acelerar el fin del cancer.
+                </p>
+</div>
+</section>
+<section class="py-40 border-t border-white/5" id="historia">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="glass-panel p-16 border-l-8 border-white max-w-5xl mx-auto space-y-12">
+<h2 class="text-4xl uppercase tracking-tighter">Nuestra Trayectoria</h2>
+<div class="space-y-6 text-xl text-white/70 leading-relaxed font-light">
+<p>ONCOLOGIA nacio de una brecha critica en la ciencia global: la falta de representacion de las poblaciones latinoamericanas en los estudios genomicos. Mientras que la medicina de precision avanzaba en el hemisferio norte, nuestra region permanecia como un punto ciego para los algoritmos de deteccion y tratamiento.</p>
+<p>Fundada por un equipo multidisciplinario de bioinformaticos, genetistas y desarrolladores de IA, nos propusimos construir el ecosistema de datos oncologicos mas robusto y diverso de LATAM.</p>
+</div>
+<div class="pt-8 border-t border-white/10">
+<p class="text-3xl font-black italic tracking-tight text-white leading-snug">
+                            "No somos un laboratorio que agrego tecnologia. Somos una empresa de tecnologia enfocada en oncologia."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-black">
+<div class="max-w-[1440px] mx-auto px-10 grid md:grid-cols-2 gap-10">
+<div class="glass-panel p-12 cyber-border flex flex-col justify-between">
+<div>
+<h3 class="text-4xl mb-8 uppercase tracking-widest text-white/20">Mision</h3>
+<p class="text-2xl font-light leading-relaxed">
+                            Democratizar el acceso a la medicina de precision en America Latina, integrando IA y genomica para que cada paciente reciba el tratamiento exacto que su biologia demanda.
+                        </p>
+</div>
+<div class="mt-12">
+<span class="material-symbols-outlined text-4xl text-white/40">public</span>
+</div>
+</div>
+<div class="glass-panel p-12 cyber-border flex flex-col justify-between">
+<div>
+<h3 class="text-4xl mb-8 uppercase tracking-widest text-white/20">Vision</h3>
+<p class="text-2xl font-light leading-relaxed">
+                            Convertirnos en el estandar global de inteligencia oncologica, donde los tratamientos no se disenen para el tipo de tumor, sino para la firma genetica unica de cada individuo.
+                        </p>
+</div>
+<div class="mt-12 text-right">
+<span class="material-symbols-outlined text-4xl text-white/40">insights</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="mb-24 text-center">
+<h2 class="text-5xl uppercase tracking-widest">Diferenciales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+<div class="glass-panel p-16 cyber-border">
+<span class="text-7xl font-black text-white/10 block mb-6">01</span>
+<h3 class="text-2xl mb-6">IA Propietaria</h3>
+<p class="text-white/40 mb-10 font-light">Algoritmos entrenados exclusivamente en cohortes de pacientes reales para identificar variantes accionables.</p>
+<p class="terminal-text">engine: PROPRIETARY / models: CUSTOM_TRAINED / status: STABLE</p>
+</div>
+<div class="glass-panel p-16 cyber-border">
+<span class="text-7xl font-black text-white/10 block mb-6">02</span>
+<h3 class="text-2xl mb-6">Soberania de Datos</h3>
+<p class="text-white/40 mb-10 font-light">Infraestructura local que garantiza la seguridad y el cumplimiento etico de la informacion genomica regional.</p>
+<p class="terminal-text">encryption: AES_256 / compliance: HIPAA_LATAM / nodes: REGIONAL</p>
+</div>
+<div class="glass-panel p-16 cyber-border">
+<span class="text-7xl font-black text-white/10 block mb-6">03</span>
+<h3 class="text-2xl mb-6">Escalabilidad Clinica</h3>
+<p class="text-white/40 mb-10 font-light">Capacidad de procesar miles de exomas y genomas completos con tiempos de respuesta lideres en la industria.</p>
+<p class="terminal-text">throughput: HIGH_SCALE / processing: CLOUD_NATIVE / latency: MINIMAL</p>
+</div>
+<div class="glass-panel p-16 cyber-border">
+<span class="text-7xl font-black text-white/10 block mb-6">04</span>
+<h3 class="text-2xl mb-6">Rigor Cientifico</h3>
+<p class="text-white/40 mb-10 font-light">Validacion continua por juntas medicas oncologicas y colaboracion con centros de investigacion globales.</p>
+<p class="terminal-text">validation: CLINICAL_BOARD / peer_review: ACTIVE / network: GLOBAL</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-[#080808]">
+<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center">
+<div class="relative group">
+<div class="aspect-square bg-white/5 cyber-border overflow-hidden grayscale contrast-125">
+<img alt="Molecular Laboratory" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYjLHmCM1xy3TJnfYlYbjT5Oednu06F7JR_4Sx8wUS3lLmW06cl53BqW8RHrEiQhZBBWujhp1lYGzKe41Q4PVODMwxpwTlyGxdkCuGEoJBn8uGw4Lk97n2Q-BgrullJ3hUA94Z0ZPpPgK9rAwmUhegNQ1s8VVolg0Bt4Za_mV2GGOFheX3s8pOnPGUKbMZiE0BaydNqUWrKSWKzygav5WuF6lsrg-aQ3lOCuEjRRMiRItoc2apR4xGxgRi9VdzGOgs_f1Y68SMT4"/>
+</div>
+<div class="absolute top-8 left-8 bg-white text-black px-4 py-1.5 flex items-center gap-2">
+<span class="size-2 bg-black animate-pulse rounded-full"></span>
+<span class="text-[10px] font-black uppercase tracking-widest">OPERACIONAL / MEDELLIN_HUB</span>
+</div>
+</div>
+<div class="space-y-12">
+<h2 class="text-5xl">Laboratorio de Diagnostico Molecular</h2>
+<p class="text-xl text-white/60 leading-relaxed font-light">
+                        Nuestra sede central en Medellin, Colombia, cuenta con tecnologia de vanguardia para la secuenciacion de nueva generacion (NGS), permitiendo el analisis de muestras de todo el continente con estandares internacionales.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-panel p-4 text-center">
+<p class="text-[10px] font-bold text-white/40 mb-1">CAPACIDAD</p>
+<p class="font-black text-xl">NGS</p>
+</div>
+<div class="glass-panel p-4 text-center">
+<p class="text-[10px] font-bold text-white/40 mb-1">TECNICA</p>
+<p class="font-black text-xl">EXOME</p>
+</div>
+<div class="glass-panel p-4 text-center">
+<p class="text-[10px] font-bold text-white/40 mb-1">ENFOQUE</p>
+<p class="font-black text-xl">SOMATICO</p>
+</div>
+<div class="glass-panel p-4 text-center">
+<p class="text-[10px] font-bold text-white/40 mb-1">SERVICIO</p>
+<p class="font-black text-xl">WGS</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" data-values-grid data-stagger-children data-stagger-delay="0.15">
+<div class="glass-panel p-10 space-y-6 cyber-border value-card scroll-reveal hover-lift hover-glow" style="opacity: 0; transform: translateY(20px);">
+<span class="material-symbols-outlined text-4xl text-white">science</span>
+<h4 class="text-xl font-black uppercase italic">Rigor</h4>
+<p class="text-sm text-white/40 font-light">Excelencia cientifica sin concesiones en cada dato procesado.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border value-card scroll-reveal hover-lift hover-glow" style="opacity: 0; transform: translateY(20px);">
+<span class="material-symbols-outlined text-4xl text-white">speed</span>
+<h4 class="text-xl font-black uppercase italic">Urgencia</h4>
+<p class="text-sm text-white/40 font-light">Entendemos que el tiempo es el recurso mas valioso para un paciente.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border value-card scroll-reveal hover-lift hover-glow" style="opacity: 0; transform: translateY(20px);">
+<span class="material-symbols-outlined text-4xl text-white">target</span>
+<h4 class="text-xl font-black uppercase italic">Precision</h4>
+<p class="text-sm text-white/40 font-light">Foco absoluto en la veracidad y la accion clinica del resultado.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border value-card scroll-reveal hover-lift hover-glow" style="opacity: 0; transform: translateY(20px);">
+<span class="material-symbols-outlined text-4xl text-white">handshake</span>
+<h4 class="text-xl font-black uppercase italic">Colaboracion</h4>
+<p class="text-sm text-white/40 font-light">El fin del cancer solo es posible mediante el esfuerzo colectivo.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-64 bg-black relative">
+<div class="max-w-6xl mx-auto px-10 text-center space-y-4">
+<h2 class="text-5xl md:text-7xl font-black glitch-text leading-tight">
+                    El cancer es una enfermedad genetica. <br/>
+                    La cura sera genetica. <br/>
+<span class="opacity-30">Y sera acelerada por IA.</span>
+</h2>
+</div>
+</section>
+<section class="py-40 border-t border-white/5">
+<div class="max-w-4xl mx-auto px-10 text-center space-y-16">
+<div class="space-y-6">
+<h2 class="text-5xl font-black">Unete a la Revolucion</h2>
+<p class="text-white/40 text-xl font-light">Buscamos el mejor talento en Bioinformatica, Ingenieria de Software y Oncologia Medica.</p>
+</div>
+<div class="glass-panel p-12 cyber-border max-w-2xl mx-auto">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] mb-6">Postulacion Espontanea</h4>
+<p class="text-lg font-light mb-8">Quieres ser parte de la solucion? Cuentanos sobre tu perfil y por que quieres acelerar el fin del cancer.</p>
+<a class="inline-block bg-white text-black px-12 py-4 text-[11px] font-black uppercase tracking-[0.3em] hover:scale-105 transition-all" href="mailto:talent@oncologia.ai">
+                        talent@oncologia.ai
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t border-white/5 py-24 px-10 relative z-10">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20">
+<div class="col-span-2 space-y-8">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+</div>
+<span class="text-xl font-black uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></span>
+</a>
+<p class="text-white/40 font-light text-lg max-w-md italic">
+                    "Transformando el futuro de la oncologia a traves de la inteligencia artificial y la genomica de precision."
+                </p>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Compania</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="nosotros.html">Nuestra Historia</a>
+<a class="hover:text-white" href="nosotros.html">Laboratorio</a>
+<a class="hover:text-white" href="nosotros.html">Talento</a>
+<a class="hover:text-white" href="contacto.html">Prensa</a>
+</nav>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Legal</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="contacto.html">Privacidad de Datos</a>
+<a class="hover:text-white" href="nosotros.html">Etica en IA</a>
+<a class="hover:text-white" href="contacto.html">Cumplimiento</a>
+<a class="hover:text-white" href="contacto.html">Contacto</a>
+</nav>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-white/20">
+<p>© 2024 Oncologia Company. IA impulsada por la ciencia.</p>
+<div class="flex gap-12">
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Twitter / X</a>
+<a class="hover:text-white transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loading-dna"></div>
+</div>
+
+<script src="assets/js/oncologia-core.js"></script>
+<script src="assets/js/dna-animation.js"></script>
+<script src="assets/js/page-effects.js"></script>
+</body></html>

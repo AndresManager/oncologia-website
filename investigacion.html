@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ONCOLOGIA | Investigacion &amp; Pharma AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-dark": "#050505",
+                        "cyber-gray": "#1A1A1A"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "ultra-tight": "-0.04em",
+                        "super-wide": "0.3em"
+                    },
+                    backgroundImage: {
+                        'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display antialiased bg-background-dark text-white overflow-x-hidden font-light;
+            }
+            h1, h2, h3, h4 { @apply font-black tracking-ultra-tight; }
+        }
+        .glass-panel {
+            @apply backdrop-blur-xl bg-white/[0.03] border border-white/10;
+        }
+        .cyber-border {
+            @apply border border-white/10 relative;
+        }
+        .cyber-border::before {
+            content: '';
+            @apply absolute -top-px -left-px w-2 h-2 border-t border-l border-white/40;
+        }
+        .cyber-border::after {
+            content: '';
+            @apply absolute -bottom-px -right-px w-2 h-2 border-b border-r border-white/40;
+        }
+        .neon-glow-white {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.4);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.005) 50%);
+            background-size: 100% 4px;
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .text-gradient-white {
+            background: linear-gradient(to bottom, #fff 30%, rgba(255,255,255,0.2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .terminal-text {
+            @apply font-mono text-[10px] text-white/40 tracking-wider;
+        }
+    </style>
+</head>
+<body>
+<div class="fixed inset-0 pointer-events-none opacity-[0.05] z-[100] bg-noise"></div>
+<div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
+<div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
+<header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-10 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
+</div>
+<h1 class="text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+</a>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="plataforma.html">Plataforma</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="precision.html">Precision</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover-underline" href="investigacion.html">Research</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
+</nav>
+<a href="contacto.html" class="border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Contacto</a>
+</div>
+</header>
+<main class="relative z-10">
+<section class="min-h-screen flex flex-col items-center justify-center pt-20 px-10 text-center">
+<div class="max-w-5xl mx-auto space-y-12">
+<div class="inline-flex items-center px-5 py-1.5 glass-panel rounded-full border-white/20 scroll-reveal">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/70">Investigacion &amp; Colaboracion</p>
+</div>
+<h1 class="text-6xl md:text-8xl leading-[0.9] font-black scroll-reveal stagger-1">
+                    Aceleramos tu investigacion <br/>
+<span class="text-gradient-white animate-pulse-text">oncologica.</span>
+</h1>
+<div class="max-w-2xl mx-auto glass-panel p-6 border-l-4 border-white text-left">
+<p class="text-lg text-white/60 leading-relaxed font-light">
+                        Transformamos datos genomicos masivos en conocimiento accionable para el descubrimiento de farmacos y la validacion de hipotesis cientificas mediante IA avanzada.
+                    </p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 pt-8">
+<a class="glass-panel px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white/10 transition-all" href="#pharma">Pharma &amp; Biotech</a>
+<a class="glass-panel px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white/10 transition-all" href="#academia">Academia</a>
+<a class="glass-panel px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white/10 transition-all" href="#datos">Datos &amp; Cohortes</a>
+</div>
+</div>
+</section>
+<section class="py-40 border-t border-white/5" id="pharma">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="mb-20 space-y-4">
+<h2 class="text-4xl uppercase tracking-tighter">Soluciones Pharma</h2>
+<p class="text-white/40 font-light max-w-xl">Optimizacion del pipeline de desarrollo clinico mediante medicina de precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
+<div class="glass-panel p-12 cyber-border group hover:bg-white/[0.05] transition-all">
+<span class="material-symbols-outlined text-4xl mb-6 text-white/60 group-hover:text-white transition-colors">target</span>
+<h3 class="text-2xl mb-4">Target Discovery</h3>
+<p class="text-white/40 mb-8 font-light">Identificacion de nuevos targets terapeuticos basados en firmas genomicas de pacientes reales.</p>
+<p class="terminal-text font-mono">targets_analyzed: 12,847<br/>p_value_threshold: 0.001</p>
+</div>
+<div class="glass-panel p-12 cyber-border group hover:bg-white/[0.05] transition-all">
+<span class="material-symbols-outlined text-4xl mb-6 text-white/60 group-hover:text-white transition-colors">groups</span>
+<h3 class="text-2xl mb-4">Patient Stratification</h3>
+<p class="text-white/40 mb-8 font-light">Diseno de biomarcadores para la seleccion precisa de pacientes en ensayos clinicos fase II/III.</p>
+<p class="terminal-text font-mono">cohort_size: 4,500<br/>accuracy_score: 0.94</p>
+</div>
+<div class="glass-panel p-12 cyber-border group hover:bg-white/[0.05] transition-all">
+<span class="material-symbols-outlined text-4xl mb-6 text-white/60 group-hover:text-white transition-colors">database</span>
+<h3 class="text-2xl mb-4">Real World Data (RWD)</h3>
+<p class="text-white/40 mb-8 font-light">Analisis de resultados clinicos en vida real para estudios de post-comercializacion.</p>
+<p class="terminal-text font-mono">records_processed: 2.1M<br/>data_source: genomic_emr</p>
+</div>
+<div class="glass-panel p-12 cyber-border group hover:bg-white/[0.05] transition-all">
+<span class="material-symbols-outlined text-4xl mb-6 text-white/60 group-hover:text-white transition-colors">biotech</span>
+<h3 class="text-2xl mb-4">CDx Development</h3>
+<p class="text-white/40 mb-8 font-light">Co-desarrollo de diagnosticos acompanantes validados mediante nuestra plataforma AI.</p>
+<p class="terminal-text font-mono">regulatory_status: research_use<br/>validation_sync: ready</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-black" id="academia">
+<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20">
+<div class="space-y-12">
+<h2 class="text-6xl font-black">Para Investigadores <br/> &amp; <span class="text-white/40">Academia</span></h2>
+<div class="glass-panel p-10 space-y-8 border-l-4 border-white/20">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-white/60">school</span>
+<div>
+<h4 class="text-lg mb-2">Licencias Academicas</h4>
+<p class="text-sm text-white/40 font-light">Acceso a nuestra infraestructura de analisis para proyectos de investigacion sin fines de lucro.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-white/60">support_agent</span>
+<div>
+<h4 class="text-lg mb-2">Soporte Bioinformatico</h4>
+<p class="text-sm text-white/40 font-light">Asesoria especializada para el procesamiento y curaduria de datos genomicos complejos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-10">
+<div class="glass-panel p-10 cyber-border">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60 mb-8">Colaboracion Cientifica</h4>
+<p class="text-xl font-light leading-relaxed">Impulsamos la publicacion conjunta de hallazgos en oncologia genomica, aportando una de las bases de datos mas grandes de LATAM.</p>
+</div>
+<div class="glass-panel p-10 cyber-border">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60 mb-8">Areas de Interes</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 glass-panel text-[10px] font-bold uppercase tracking-widest">Genomica LATAM</span>
+<span class="px-4 py-1.5 glass-panel text-[10px] font-bold uppercase tracking-widest">Tumores Raros</span>
+<span class="px-4 py-1.5 glass-panel text-[10px] font-bold uppercase tracking-widest">Inmunoterapia</span>
+<span class="px-4 py-1.5 glass-panel text-[10px] font-bold uppercase tracking-widest">IA Clinica</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-[#080808]" id="datos">
+<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-24 items-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8" data-stagger-children data-stagger-delay="0.15">
+<div class="space-y-2 scroll-reveal">
+<p class="text-5xl font-black glow-text"><span data-counter data-target="15000" data-suffix="+" data-duration="2500">0</span></p>
+<p class="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">Pacientes Perfilados</p>
+</div>
+<div class="space-y-2 scroll-reveal">
+<p class="text-5xl font-black glow-text"><span data-counter data-target="50" data-suffix="+" data-duration="2000">0</span></p>
+<p class="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">Tipos de Tumor</p>
+</div>
+<div class="space-y-2 scroll-reveal">
+<p class="text-5xl font-black glow-text"><span data-counter data-target="2000000" data-suffix="+" data-duration="2500">0</span></p>
+<p class="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">Variantes Genomicas</p>
+</div>
+<div class="space-y-2 scroll-reveal">
+<p class="text-5xl font-black glow-text"><span data-counter data-target="98" data-suffix="%" data-duration="2000">0</span></p>
+<p class="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">Data Quality Score</p>
+</div>
+</div>
+<div class="space-y-8">
+<div class="glass-panel p-10 cyber-border">
+<h3 class="text-2xl mb-8">Estructura del Registro</h3>
+<ul class="space-y-4 text-sm text-white/60 font-light">
+<li class="flex items-center gap-3"><span class="size-1.5 bg-white/40"></span> Perfil Genomico Somatico &amp; Germinal</li>
+<li class="flex items-center gap-3"><span class="size-1.5 bg-white/40"></span> Datos Demograficos y Epidemiologicos</li>
+<li class="flex items-center gap-3"><span class="size-1.5 bg-white/40"></span> Historial de Tratamiento y Respuesta</li>
+<li class="flex items-center gap-3"><span class="size-1.5 bg-white/40"></span> Digital Pathology Images (WSI)</li>
+</ul>
+</div>
+<div class="glass-panel p-6 border-l-2 border-white/20 bg-white/[0.02]">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-white/30 text-xl">shield</span>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 leading-relaxed">
+                                PRIVACIDAD: Todos los datos estan anonimizados bajo estandares HIPAA y GDPR. La integridad y soberania de los datos de los pacientes es nuestra prioridad tecnica.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40">
+<div class="max-w-[1440px] mx-auto px-10">
+<h2 class="text-4xl text-center mb-24 uppercase tracking-widest text-white/40">Modelos de Colaboracion</h2>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="glass-panel p-10 flex flex-col">
+<div class="flex justify-between items-start mb-12">
+<span class="text-sm font-mono text-white/20">#MODEL_01</span>
+<span class="material-symbols-outlined text-white/20">architecture</span>
+</div>
+<h3 class="text-2xl mb-6">Basado en Proyecto</h3>
+<p class="text-sm text-white/40 mb-8 font-light">Colaboracion especifica para un objetivo de investigacion delimitado.</p>
+<div class="mt-auto space-y-6">
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-3">Incluye:</h5>
+<ul class="text-xs space-y-2 text-white/40">
+<li>- Acceso a Cohorte Especifica</li>
+<li>- Analisis Bioinformatico Estandar</li>
+<li>- Reporte de Resultados Final</li>
+</ul>
+</div>
+<p class="text-[10px] font-mono text-white/20">DURACION: 3-6 MESES</p>
+</div>
+</div>
+<div class="glass-panel p-10 flex flex-col border-white/40 bg-white/[0.06] relative">
+<div class="absolute -top-3 left-10 bg-white text-black text-[8px] font-black px-3 py-1 tracking-[0.3em] uppercase">Recomendado</div>
+<div class="flex justify-between items-start mb-12">
+<span class="text-sm font-mono text-white/60">#MODEL_02</span>
+<span class="material-symbols-outlined neon-glow-white">verified_user</span>
+</div>
+<h3 class="text-2xl mb-6 neon-glow-white">Partnership Estrategico</h3>
+<p class="text-sm text-white/80 mb-8 font-light">Alianza a largo plazo para integracion de datos y codesarrollo continuo.</p>
+<div class="mt-auto space-y-6">
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-white mb-3">Incluye:</h5>
+<ul class="text-xs space-y-2 text-white/60">
+<li>- Acceso Total a Datasets Propios</li>
+<li>- Pipeline de IA Personalizado</li>
+<li>- Asientos en Comite Cientifico</li>
+<li>- Prioridad en Nuevas Cohortes</li>
+</ul>
+</div>
+<p class="text-[10px] font-mono text-white/40">DURACION: 12-36 MESES</p>
+</div>
+</div>
+<div class="glass-panel p-10 flex flex-col">
+<div class="flex justify-between items-start mb-12">
+<span class="text-sm font-mono text-white/20">#MODEL_03</span>
+<span class="material-symbols-outlined text-white/20">science</span>
+</div>
+<h3 class="text-2xl mb-6">Co-Desarrollo</h3>
+<p class="text-sm text-white/40 mb-8 font-light">Creacion conjunta de nuevas herramientas de diagnostico o algoritmos de IA.</p>
+<div class="mt-auto space-y-6">
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-3">Incluye:</h5>
+<ul class="text-xs space-y-2 text-white/40">
+<li>- Propiedad Intelectual Compartida</li>
+<li>- Infraestructura de Computo</li>
+<li>- Validacion Clinica en Red</li>
+</ul>
+</div>
+<p class="text-[10px] font-mono text-white/20">DURACION: VARIABLE</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-64 relative overflow-hidden text-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08)_0%,_transparent_70%)]"></div>
+<div class="max-w-4xl mx-auto px-10 relative z-10 space-y-16">
+<h2 class="text-5xl md:text-7xl glow-text">Tienes un proyecto de investigacion oncologica?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a href="contacto.html" class="bg-white text-black px-12 py-5 text-[11px] font-black uppercase tracking-[0.3em] hover:scale-105 transition-all shadow-[0_0_50px_rgba(255,255,255,0.3)]">
+                        Soy de Pharma
+                    </a>
+<a href="contacto.html" class="glass-panel px-12 py-5 text-[11px] font-black uppercase tracking-[0.3em] hover:bg-white/10 transition-all">
+                        Soy Investigador
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t border-white/5 py-24 px-10 relative z-10">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20">
+<div class="col-span-2 space-y-8">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+</div>
+<span class="text-xl font-black uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></span>
+</a>
+<p class="text-white/40 font-light text-lg max-w-md italic">
+                    "Acelerando el descubrimiento cientifico mediante la convergencia de la IA y la genomica de precision."
+                </p>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Research</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="investigacion.html">Dataset Explorer</a>
+<a class="hover:text-white" href="investigacion.html">Clinical Trials</a>
+<a class="hover:text-white" href="investigacion.html">Publications</a>
+<a class="hover:text-white" href="contacto.html">API Docs</a>
+</nav>
+</div>
+<div class="space-y-8">
+<h4 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Legal</h4>
+<nav class="flex flex-col gap-4 text-[12px] text-white/40">
+<a class="hover:text-white" href="contacto.html">Data Governance</a>
+<a class="hover:text-white" href="contacto.html">Compliance</a>
+<a class="hover:text-white" href="nosotros.html">Ethics Board</a>
+<a class="hover:text-white" href="contacto.html">Contact</a>
+</nav>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-white/20">
+<p>© 2024 Oncologia Research &amp; Pharma. Powered by AI.</p>
+<div class="flex gap-12">
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">ResearchGate</a>
+<a class="hover:text-white transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loading-dna"></div>
+</div>
+
+<script src="assets/js/oncologia-core.js"></script>
+<script src="assets/js/dna-animation.js"></script>
+<script src="assets/js/page-effects.js"></script>
+</body></html>

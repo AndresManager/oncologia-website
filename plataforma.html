@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ONCOLOGIA | Deep-Decoder DNA AI Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/animations.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent-glow": "rgba(255, 255, 255, 0.15)",
+                        "border-futuristic": "rgba(255, 255, 255, 0.1)",
+                        "background-dark": "#050505",
+                        "cyber-gray": "#1A1A1A"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "ultra-tight": "-0.04em",
+                        "super-wide": "0.3em"
+                    },
+                    backgroundImage: {
+                        'noise': "url('https://grainy-gradients.vercel.app/noise.svg')",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display antialiased bg-background-dark text-white overflow-x-hidden;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            @apply backdrop-blur-xl bg-white/[0.03] border border-white/10;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255,255,255,0.4);
+        }
+        .neon-glow-white {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
+        }
+        .cyber-border {
+            position: relative;
+        }
+        .cyber-border::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 12px; height: 1px;
+            @apply bg-white;
+        }
+        .cyber-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0; width: 1px; height: 12px;
+            @apply bg-white;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .helix-particle {
+            @apply absolute size-1 bg-white rounded-full;
+            box-shadow: 0 0 12px 2px rgba(255,255,255,0.6);
+        }
+        .data-stream {
+            @apply absolute h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-40;
+        }
+    </style>
+</head>
+<body class="bg-background-dark">
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100] bg-noise"></div>
+<div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
+<div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
+<header class="fixed top-0 z-50 w-full border-b border-border-futuristic bg-black/40 backdrop-blur-2xl transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-10 h-24 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-12 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
+</div>
+<h1 class="text-xl font-black tracking-ultra-tight uppercase glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+</a>
+<nav class="hidden lg:flex items-center gap-14">
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:text-white/60 transition-colors hover-underline" href="plataforma.html">Plataforma</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="precision.html">Precision</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
+<a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
+</nav>
+<a href="contacto.html" class="bg-white text-black px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white/90 transition-all btn-magnetic btn-ripple">Contacto</a>
+</div>
+</header>
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden px-10">
+<div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.05)_0%,_transparent_70%)]"></div>
+<div class="max-w-6xl mx-auto text-center relative z-10 space-y-12">
+<div class="inline-flex items-center gap-4 glass-panel px-6 py-2.5 rounded-full border-white/20 scroll-reveal">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+</span>
+<p class="text-[11px] font-bold tracking-[0.5em] uppercase text-white">Intelligence Core</p>
+</div>
+<h1 class="text-7xl md:text-9xl font-black tracking-ultra-tight leading-[0.85] scroll-reveal stagger-1">
+                Deep-Decoder<br/>
+<span class="neon-glow-white animate-pulse-text">DNA AI</span>
+</h1>
+<div class="glass-panel p-8 max-w-2xl mx-auto border-l-[6px] border-l-white scroll-reveal stagger-2 hover-glow">
+<p class="text-lg md:text-xl text-white/70 font-light leading-relaxed">
+                    Nuestra arquitectura neuronal de cuarta generacion disenada para la decodificacion masiva de variantes genomicas y el descubrimiento de blancos terapeuticos ultra-especificos.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 pt-8 scroll-reveal stagger-3">
+<a href="#arquitectura" class="bg-white text-black px-14 py-6 text-[12px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] btn-magnetic btn-ripple animate-pulse-glow">
+                    Explorar Arquitectura
+                </a>
+<a href="contacto.html" class="glass-panel px-14 py-6 text-[12px] font-black uppercase tracking-widest hover:bg-white/10 transition-all border-white/20 btn-magnetic btn-ripple hover-glow">
+                    Descargar Datasheet
+                </a>
+</div>
+</div>
+</section>
+<section id="arquitectura" class="py-40 bg-black relative overflow-hidden border-y border-white/5">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,_rgba(255,255,255,0.08)_0%,_transparent_60%)]"></div>
+<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+<div class="space-y-12 relative z-20">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-12 bg-white/40"></div>
+<p class="text-[11px] font-bold tracking-super-wide uppercase text-white/50">Bio-Neural Mapping</p>
+</div>
+<h2 class="text-6xl font-black tracking-ultra-tight leading-tight">
+                        Precision a Nivel <br/> <span class="text-white/40 italic">Molecular</span>
+</h2>
+<p class="text-xl text-white/50 font-light leading-relaxed max-w-lg">
+                        Visualizacion en tiempo real de la arquitectura del Deep-Decoder procesando fragmentos de ADN para identificar anomalias estructurales y polimorfismos de nucleotido unico.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-8 border-y border-white/5 py-12 scroll-reveal">
+<div class="space-y-1">
+<p class="text-4xl font-extralight glow-text"><span data-counter data-target="99.98" data-suffix="%" data-decimals="2" data-duration="2000">0</span></p>
+<p class="text-[10px] uppercase font-bold text-white/30 tracking-widest">Accuracy Rate</p>
+</div>
+<div class="space-y-1">
+<p class="text-4xl font-extralight glow-text"><span data-counter data-target="1.2" data-suffix="ms" data-decimals="1" data-duration="2000">0</span></p>
+<p class="text-[10px] uppercase font-bold text-white/30 tracking-widest">Inference Latency</p>
+</div>
+</div>
+</div>
+<div class="relative h-[800px] flex items-center justify-center" data-molecular-visualization>
+<!-- Canvas will be inserted here by MolecularVisualization -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.05)_0%,_transparent_60%)] pointer-events-none z-[1]"></div>
+<div class="relative w-72 h-[650px] flex flex-col items-center justify-between py-10 z-[2]">
+<!-- Info panels overlay -->
+<div class="absolute top-10 -left-32 space-y-2">
+<div class="glass-panel p-3 border-l-2 border-white/50">
+<p class="text-[9px] font-mono text-white/40">NODE_REF: ALPHA-09</p>
+<p class="text-[10px] font-bold text-white uppercase tracking-tighter">Structural Variant Identified</p>
+</div>
+<div class="h-px w-24 bg-gradient-to-r from-white/40 to-transparent -rotate-[15deg] origin-left ml-4"></div>
+</div>
+<div class="absolute bottom-1/4 -right-36 space-y-2 text-right">
+<div class="glass-panel p-3 border-r-2 border-white/50">
+<p class="text-[9px] font-mono text-white/40">DATA_PKT: SEC-992</p>
+<p class="text-[10px] font-bold text-white uppercase tracking-tighter">Helix Symmetry Confirmed</p>
+</div>
+<div class="flex justify-end">
+<div class="h-px w-32 bg-gradient-to-l from-white/40 to-transparent rotate-[20deg] origin-right mr-4"></div>
+</div>
+</div>
+<div class="absolute top-1/2 -left-40 glass-panel p-4 font-mono text-[9px] text-white/30 space-y-1">
+<div class="text-white">fn analyze_genomic_sequence(dna: String) {</div>
+<div class="pl-4">let patterns = neural_net.detect(dna);</div>
+<div class="pl-4">match patterns { ... }</div>
+<div class="text-white">}</div>
+</div>
+<!-- Pulsing circles for ambiance -->
+<div class="absolute size-48 border border-white/5 rounded-full animate-[pulse_6s_infinite] flex items-center justify-center opacity-20">
+<div class="size-32 border border-white/10 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-[#020202] relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-10">
+<div class="mb-24 flex flex-col items-center text-center">
+<p class="text-[10px] font-bold tracking-[0.5em] text-white/40 uppercase mb-6 scroll-reveal">Workflow E2E</p>
+<h2 class="text-6xl font-black tracking-ultra-tight mb-8 glow-text scroll-reveal stagger-1">Pipeline de Decodificacion</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative" data-pipeline data-stagger-children data-stagger-delay="0.15">
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2 z-0 pipeline-connector"></div>
+<div class="group relative glass-panel p-8 cyber-border z-10 transition-all hover:bg-white/5 pipeline-step scroll-reveal hover-lift hover-glow scan-line-effect">
+<span class="material-symbols-outlined text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">input</span>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-2">Ingerir</h3>
+<p class="text-xs text-white/40 font-light leading-relaxed">Carga masiva de archivos FASTQ/VCF mediante tuneles encriptados.</p>
+</div>
+<div class="group relative glass-panel p-8 cyber-border z-10 transition-all hover:bg-white/5 pipeline-step scroll-reveal hover-lift hover-glow scan-line-effect">
+<span class="material-symbols-outlined text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">biotech</span>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-2">Decodificar</h3>
+<p class="text-xs text-white/40 font-light leading-relaxed">Alineamiento de secuencias contra genoma de referencia GRCh38.</p>
+</div>
+<div class="group relative glass-panel p-8 cyber-border z-10 transition-all hover:bg-white/5 pipeline-step scroll-reveal hover-lift hover-glow scan-line-effect">
+<span class="material-symbols-outlined text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">query_stats</span>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-2">Predecir</h3>
+<p class="text-xs text-white/40 font-light leading-relaxed">IA propietaria calcula el impacto funcional de cada variante.</p>
+</div>
+<div class="group relative glass-panel p-8 cyber-border z-10 transition-all hover:bg-white/5 pipeline-step scroll-reveal hover-lift hover-glow scan-line-effect">
+<span class="material-symbols-outlined text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">hub</span>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-2">Conectar</h3>
+<p class="text-xs text-white/40 font-light leading-relaxed">Mapeo con bases de datos globales y cohortes LATAM exclusivas.</p>
+</div>
+<div class="group relative glass-panel p-8 cyber-border z-10 transition-all hover:bg-white/5 pipeline-step scroll-reveal hover-lift hover-glow scan-line-effect">
+<span class="material-symbols-outlined text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">file_open</span>
+<h3 class="text-sm font-bold tracking-widest uppercase mb-2">Entregar</h3>
+<p class="text-xs text-white/40 font-light leading-relaxed">Reporte clinico con recomendaciones terapeuticas accionables.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-black relative">
+<div class="max-w-[1440px] mx-auto px-10">
+<h2 class="text-5xl font-black tracking-ultra-tight mb-20 glow-text text-center scroll-reveal">Construida para escala y precision absoluta</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-stagger-children data-stagger-delay="0.1">
+<div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl text-white/60">speed</span>
+<h3 class="text-xl font-bold tracking-tight">Ultra-escala</h3>
+<p class="text-white/40 font-light leading-relaxed">Procesamiento paralelo de hasta 10,000 genomas completos simultaneamente.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl text-white/60">target</span>
+<h3 class="text-xl font-bold tracking-tight">Resolucion Molecular</h3>
+<p class="text-white/40 font-light leading-relaxed">Deteccion de variantes raras con una confianza estadistica superior al 99.9%.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl text-white/60">neurology</span>
+<h3 class="text-xl font-bold tracking-tight">IA Generativa</h3>
+<p class="text-white/40 font-light leading-relaxed">Motores Transformers adaptados para secuencias biologicas de largo alcance.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl text-white/60">layers</span>
+<h3 class="text-xl font-bold tracking-tight">Capas de Datos</h3>
+<p class="text-white/40 font-light leading-relaxed">Integracion de multi-omica: transcriptomica, proteomica y epigenetica.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl text-white/60">database</span>
+<h3 class="text-xl font-bold tracking-tight">LATAM Optimization</h3>
+<p class="text-white/40 font-light leading-relaxed">Algoritmos recalibrados para reducir sesgos genomicos en poblaciones latinas.</p>
+</div>
+<div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
+<span class="material-symbols-outlined text-4xl text-white/60">public</span>
+<h3 class="text-xl font-bold tracking-tight">Cumplimiento Global</h3>
+<p class="text-white/40 font-light leading-relaxed">Soberania de datos garantizada bajo estandares SOC 2 Tipo II y HIPAA.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-[#050505] relative border-t border-white/5">
+<div class="max-w-4xl mx-auto px-10">
+<p class="text-[10px] font-bold tracking-[0.4em] text-white/30 uppercase text-center mb-6 scroll-reveal">Modulos Especializados</p>
+<h2 class="text-4xl font-black text-center mb-20 tracking-ultra-tight scroll-reveal stagger-1">Software Suite de Nueva Generacion</h2>
+<div class="space-y-4" data-stagger-children data-stagger-delay="0.1">
+<details class="glass-panel group scroll-reveal accordion-item hover-glow">
+<summary class="p-6 flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-2xl text-white/40 group-open:text-white">analytics</span>
+<h4 class="font-bold tracking-widest uppercase text-sm">Variant Analyzer</h4>
+</div>
+<span class="material-symbols-outlined opacity-40 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/50 leading-relaxed font-light">
+Analisis profundo de variantes genomicas con clasificacion automatica segun guias ACMG/AMP y bases de datos como ClinVar, COSMIC y gnomAD.
+</div>
+</details>
+<details class="glass-panel group scroll-reveal accordion-item hover-glow">
+<summary class="p-6 flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors accordion-trigger">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-2xl text-white/40 group-open:text-white">radar</span>
+<h4 class="font-bold tracking-widest uppercase text-sm">Target Finder</h4>
+</div>
+<span class="material-symbols-outlined opacity-40 transition-transform group-open:rotate-180 accordion-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/50 leading-relaxed font-light accordion-content">
+Identificacion de blancos terapeuticos mediante analisis de redes de interaccion proteica y expresion diferencial.
+</div>
+</details>
+<details class="glass-panel group scroll-reveal accordion-item hover-glow">
+<summary class="p-6 flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors accordion-trigger">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-2xl text-white/40 group-open:text-white">science</span>
+<h4 class="font-bold tracking-widest uppercase text-sm">Drug Matcher</h4>
+</div>
+<span class="material-symbols-outlined opacity-40 transition-transform group-open:rotate-180 accordion-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/50 leading-relaxed font-light accordion-content">
+Matching automatico de variantes con farmacos aprobados y en desarrollo clinico segun nivel de evidencia.
+</div>
+</details>
+<details class="glass-panel group scroll-reveal accordion-item hover-glow">
+<summary class="p-6 flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors accordion-trigger">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-2xl text-white/40 group-open:text-white">view_in_ar</span>
+<h4 class="font-bold tracking-widest uppercase text-sm">Combo Optimizer</h4>
+</div>
+<span class="material-symbols-outlined opacity-40 transition-transform group-open:rotate-180 accordion-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/50 leading-relaxed font-light accordion-content">
+Simulacion de combinaciones farmacologicas para maximizar eficacia y minimizar efectos adversos.
+</div>
+</details>
+<details class="glass-panel group scroll-reveal accordion-item hover-glow">
+<summary class="p-6 flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors accordion-trigger">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-2xl text-white/40 group-open:text-white">clinical_notes</span>
+<h4 class="font-bold tracking-widest uppercase text-sm">Trial Connector</h4>
+</div>
+<span class="material-symbols-outlined opacity-40 transition-transform group-open:rotate-180 accordion-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/50 leading-relaxed font-light accordion-content">
+Conexion directa con ensayos clinicos activos basados en el perfil molecular del paciente.
+</div>
+</details>
+</div>
+</div>
+</section>
+<section class="py-40 bg-black">
+<div class="max-w-4xl mx-auto px-10">
+<h3 class="text-2xl font-bold mb-12 border-l-4 border-white pl-6">Especificaciones Tecnicas</h3>
+<div class="glass-panel overflow-hidden border-white/5">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-white/10 bg-white/[0.02]">
+<th class="p-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/50">Categoria</th>
+<th class="p-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/50">Especificacion</th>
+</tr>
+</thead>
+<tbody class="text-sm font-light">
+<tr class="border-b border-white/5 hover:bg-white/[0.02]">
+<td class="p-6 text-white/60 font-medium">Input Genomic Data</td>
+<td class="p-6 font-mono text-white/90">WGS (30x, 100x), WES, Targeted Panels</td>
+</tr>
+<tr class="border-b border-white/5 hover:bg-white/[0.02]">
+<td class="p-6 text-white/60 font-medium">Supported Formats</td>
+<td class="p-6 font-mono text-white/90">FASTQ, BAM, CRAM, VCF, gVCF</td>
+</tr>
+<tr class="border-b border-white/5 hover:bg-white/[0.02]">
+<td class="p-6 text-white/60 font-medium">Reference Genomes</td>
+<td class="p-6 font-mono text-white/90">GRCh38 / hg38, GRCh37 / hg19, CHM13-T2T</td>
+</tr>
+<tr class="border-b border-white/5 hover:bg-white/[0.02]">
+<td class="p-6 text-white/60 font-medium">Security Standards</td>
+<td class="p-6 font-mono text-white/90">SOC 2 TYPE II, HIPAA, GDPR Compliant</td>
+</tr>
+<tr class="hover:bg-white/[0.02]">
+<td class="p-6 text-white/60 font-medium">Deployment</td>
+<td class="p-6 font-mono text-white/90">On-Prem, Private Cloud, Hybrid SaaS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="py-64 bg-black relative overflow-hidden text-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.15)_0%,_transparent_70%)]"></div>
+<div class="max-w-4xl mx-auto px-10 relative z-10 space-y-16">
+<h2 class="text-6xl md:text-8xl font-black tracking-ultra-tight leading-[1.1] glow-text scroll-reveal">
+                Quieres ver Deep-Decoder en accion?
+            </h2>
+<a href="contacto.html" class="inline-block bg-white text-black px-20 py-8 text-[14px] font-black uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-[0_0_60px_rgba(255,255,255,0.4)] scroll-reveal stagger-1 btn-magnetic btn-ripple animate-pulse-glow">
+                Agendar Demo
+            </a>
+</div>
+</section>
+<footer class="bg-background-dark border-t border-white/10 py-32 px-10">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20">
+<div class="col-span-2 space-y-12">
+<a href="index.html" class="flex items-center gap-3 group">
+<div class="relative">
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+</div>
+<span class="text-xl font-black tracking-ultra-tight uppercase glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></span>
+</a>
+<p class="text-white/40 font-light text-xl max-w-md leading-relaxed italic">
+                    "Decodificando el genoma humano para personalizar la cura del cancer."
+                </p>
+</div>
+<div class="space-y-10">
+<h4 class="text-[11px] font-black uppercase tracking-[0.5em] text-white/80">Recursos</h4>
+<nav class="flex flex-col gap-5 text-[13px] font-medium text-white/40">
+<a class="hover:text-white transition-all" href="contacto.html">Documentacion API</a>
+<a class="hover:text-white transition-all" href="investigacion.html">Datasets</a>
+<a class="hover:text-white transition-all" href="investigacion.html">Whitepapers</a>
+<a class="hover:text-white transition-all" href="contacto.html">Status</a>
+</nav>
+</div>
+<div class="space-y-10">
+<h4 class="text-[11px] font-black uppercase tracking-[0.5em] text-white/80">Legal</h4>
+<nav class="flex flex-col gap-5 text-[13px] font-medium text-white/40">
+<a class="hover:text-white transition-all" href="contacto.html">Privacidad</a>
+<a class="hover:text-white transition-all" href="contacto.html">Seguridad</a>
+<a class="hover:text-white transition-all" href="contacto.html">Terminos</a>
+<a class="hover:text-white transition-all" href="contacto.html">Compliance</a>
+</nav>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-32 pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-bold uppercase tracking-[0.4em] text-white/20">
+<p>© 2024 Oncologia AI. Todos los derechos reservados.</p>
+<div class="flex gap-16">
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loading-dna"></div>
+</div>
+
+<script src="assets/js/oncologia-core.js"></script>
+<script src="assets/js/dna-animation.js"></script>
+<script src="assets/js/page-effects.js"></script>
+</body></html>
