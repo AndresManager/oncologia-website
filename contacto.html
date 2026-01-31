@@ -150,7 +150,28 @@
 </div>
 <div class="space-y-2">
 <label class="text-[10px] font-bold uppercase tracking-widest text-white/40" for="telefono">Teléfono</label>
-<input id="telefono" name="telefono" class="w-full bg-white/5 border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="+57 --- --- ----" type="tel"/>
+<div class="flex">
+<div class="relative">
+<select id="country-code" name="country_code" class="appearance-none bg-white/5 border border-white/10 border-r-0 text-white py-4 pl-4 pr-10 font-light transition-all duration-300 focus:bg-white/10 focus:ring-white focus:border-white cursor-pointer h-full" style="min-width: 100px;">
+<option value="+57" data-flag="🇨🇴">🇨🇴 +57</option>
+<option value="+1" data-flag="🇺🇸">🇺🇸 +1</option>
+<option value="+52" data-flag="🇲🇽">🇲🇽 +52</option>
+<option value="+54" data-flag="🇦🇷">🇦🇷 +54</option>
+<option value="+55" data-flag="🇧🇷">🇧🇷 +55</option>
+<option value="+56" data-flag="🇨🇱">🇨🇱 +56</option>
+<option value="+51" data-flag="🇵🇪">🇵🇪 +51</option>
+<option value="+593" data-flag="🇪🇨">🇪🇨 +593</option>
+<option value="+58" data-flag="🇻🇪">🇻🇪 +58</option>
+<option value="+507" data-flag="🇵🇦">🇵🇦 +507</option>
+<option value="+506" data-flag="🇨🇷">🇨🇷 +506</option>
+<option value="+34" data-flag="🇪🇸">🇪🇸 +34</option>
+</select>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/40">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+</span>
+</div>
+<input id="telefono" name="telefono" class="flex-1 bg-white/5 border border-white/10 text-white focus:ring-white focus:border-white py-4 px-4 font-light transition-all duration-300 focus:bg-white/10 focus:scale-[1.02]" placeholder="--- --- ----" type="tel"/>
+</div>
 </div>
 </div>
 <div class="space-y-2">
