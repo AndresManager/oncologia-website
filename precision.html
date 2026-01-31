@@ -69,7 +69,7 @@
 <div class="fixed inset-0 pointer-events-none opacity-[0.05] z-[100] bg-noise"></div>
 <div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
 <div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
-<header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
+<header id="main-header" class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
 <div class="max-w-[1440px] mx-auto px-4 md:px-10 h-20 flex items-center justify-between">
 <a href="index.html" class="flex items-center gap-2 md:gap-3 group">
 <div class="relative">
@@ -378,6 +378,7 @@
 <script>
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const mainHeader = document.getElementById('main-header');
 const menuSpans = mobileMenuBtn.querySelectorAll('span');
 mobileMenuBtn.addEventListener('click', () => {
     const isOpen = !mobileMenu.classList.contains('translate-x-full');
@@ -386,12 +387,16 @@ mobileMenuBtn.addEventListener('click', () => {
         menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
         menuSpans[1].classList.remove('opacity-0');
         menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+        mainHeader.classList.remove('bg-black');
+        mainHeader.classList.add('bg-black/40');
         document.body.style.overflow = '';
     } else {
         mobileMenu.classList.remove('translate-x-full');
         menuSpans[0].classList.add('rotate-45', 'translate-y-2');
         menuSpans[1].classList.add('opacity-0');
         menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
+        mainHeader.classList.remove('bg-black/40');
+        mainHeader.classList.add('bg-black');
         document.body.style.overflow = 'hidden';
     }
 });
