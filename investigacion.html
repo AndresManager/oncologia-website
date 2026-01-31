@@ -81,13 +81,13 @@
 <div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
 <div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
 <header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
-<div class="max-w-[1440px] mx-auto px-10 h-20 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-3 group">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 md:gap-3 group">
 <div class="relative">
-<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-8 md:h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
 <div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
 </div>
-<h1 class="text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+<h1 class="text-base md:text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
 </a>
 <nav class="hidden lg:flex items-center gap-10">
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="plataforma.html">Plataforma</a>
@@ -96,16 +96,33 @@
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover-underline" href="investigacion.html">Research</a>
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
 </nav>
-<a href="contacto.html" class="border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Contacto</a>
+<div class="flex items-center gap-4">
+<a href="contacto.html" class="hidden md:block border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Contacto</a>
+<button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 z-40">
+<nav class="flex flex-col items-center justify-center h-full gap-8 pb-20">
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="plataforma.html">Plataforma</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="precision.html">Precision</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white hover:text-[#00D4FF] transition-colors" href="investigacion.html">Research</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="nosotros.html">Nosotros</a>
+<a href="contacto.html" class="mt-8 border border-white/20 px-10 py-4 text-sm font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all">Contacto</a>
+</nav>
 </div>
 </header>
 <main class="relative z-10">
-<section class="min-h-screen flex flex-col items-center justify-center pt-20 px-10 text-center">
+<section class="min-h-screen flex flex-col items-center justify-center pt-20 px-4 md:px-10 text-center">
 <div class="max-w-5xl mx-auto space-y-12">
 <div class="inline-flex items-center px-5 py-1.5 glass-panel rounded-full border-white/20 scroll-reveal">
 <p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/70">Investigación &amp; Colaboración</p>
 </div>
-<h1 class="text-6xl md:text-8xl leading-[0.9] font-black scroll-reveal stagger-1">
+<h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl leading-[0.9] font-black scroll-reveal stagger-1">
                     Aceleramos tu investigación <br/>
 <span class="text-gradient-white animate-pulse-text">oncológica.</span>
 </h1>
@@ -122,7 +139,7 @@
 </div>
 </section>
 <section class="py-40 border-t border-white/5" id="pharma">
-<div class="max-w-[1440px] mx-auto px-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
 <div class="mb-20 space-y-4">
 <h2 class="text-4xl uppercase tracking-tighter">Soluciones Pharma</h2>
 <p class="text-white/40 font-light max-w-xl">Optimización del pipeline de desarrollo clínico mediante medicina de precisión.</p>
@@ -156,7 +173,7 @@
 </div>
 </section>
 <section class="py-40 bg-black" id="academia">
-<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-20">
 <div class="space-y-12">
 <h2 class="text-6xl font-black">Para Investigadores <br/> &amp; <span class="text-white/40">Academia</span></h2>
 <div class="glass-panel p-10 space-y-8 border-l-4 border-white/20">
@@ -194,7 +211,7 @@
 </div>
 </section>
 <section class="py-40 bg-[#080808]" id="datos">
-<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-24 items-center">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-24 items-center">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8" data-stagger-children data-stagger-delay="0.15">
 <div class="space-y-2 scroll-reveal">
 <p class="text-5xl font-black glow-text"><span data-counter data-target="15000" data-suffix="+" data-duration="2500">0</span></p>
@@ -235,7 +252,7 @@
 </div>
 </section>
 <section class="py-40">
-<div class="max-w-[1440px] mx-auto px-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
 <h2 class="text-4xl text-center mb-24 uppercase tracking-widest text-white/40">Modelos de Colaboración</h2>
 <div class="grid md:grid-cols-3 gap-10">
 <div class="glass-panel p-10 flex flex-col">
@@ -365,4 +382,25 @@
 <script src="assets/js/oncologia-core.js"></script>
 <script src="assets/js/dna-animation.js"></script>
 <script src="assets/js/page-effects.js"></script>
+<script>
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuSpans = mobileMenuBtn.querySelectorAll('span');
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('translate-x-full');
+    if (isOpen) {
+        mobileMenu.classList.add('translate-x-full');
+        menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.remove('opacity-0');
+        menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = '';
+    } else {
+        mobileMenu.classList.remove('translate-x-full');
+        menuSpans[0].classList.add('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.add('opacity-0');
+        menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = 'hidden';
+    }
+});
+</script>
 </body></html>

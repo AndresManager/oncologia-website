@@ -95,13 +95,13 @@
 <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100] bg-noise"></div>
 <div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
 <header class="fixed top-0 z-50 w-full border-b border-border-futuristic bg-black/40 backdrop-blur-2xl transition-all duration-300">
-<div class="max-w-[1440px] mx-auto px-10 h-24 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-3 group">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 h-20 md:h-24 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 md:gap-3 group">
 <div class="relative">
-<img src="OncologIA.png" alt="OncologIA Logo" class="h-12 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-8 md:h-12 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
 <div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
 </div>
-<h1 class="text-xl font-black tracking-ultra-tight uppercase glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+<h1 class="text-base md:text-xl font-black tracking-ultra-tight uppercase glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
 </a>
 <nav class="hidden lg:flex items-center gap-14">
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:text-white/60 transition-colors hover-underline" href="plataforma.html">Plataforma</a>
@@ -110,14 +110,33 @@
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
 </nav>
-<a href="contacto.html" class="relative overflow-hidden group border border-white/20 px-8 py-3.5 hover:border-white transition-all btn-magnetic btn-ripple">
+<div class="flex items-center gap-4">
+<a href="contacto.html" class="hidden md:flex relative overflow-hidden group border border-white/20 px-8 py-3.5 hover:border-white transition-all btn-magnetic btn-ripple">
 <span class="relative z-10 text-[10px] font-bold uppercase tracking-[0.3em]">Contacto</span>
 <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
 <span class="absolute inset-0 z-20 flex items-center justify-center text-black text-[10px] font-bold uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity">Contacto</span>
 </a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Panel -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 md:top-24 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 z-40">
+<nav class="flex flex-col items-center justify-center h-full gap-8 pb-20">
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white hover:text-[#00D4FF] transition-colors" href="plataforma.html">Plataforma</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="precision.html">Precision</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="investigacion.html">Research</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="nosotros.html">Nosotros</a>
+<a href="contacto.html" class="mt-8 border border-white/20 px-10 py-4 text-sm font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all">Contacto</a>
+</nav>
 </div>
 </header>
-<section class="relative min-h-screen flex items-center pt-24 overflow-hidden px-10" data-hero-3d>
+<section class="relative min-h-screen flex items-center pt-20 md:pt-24 overflow-hidden px-4 md:px-10" data-hero-3d>
 <!-- 3D Canvas Background Container -->
 <div class="hero-bg-container absolute inset-0 z-0 overflow-hidden">
 <!-- Canvas will be inserted here by HeroBackground3D -->
@@ -138,7 +157,7 @@
 </span>
 <p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white/60">Pioneros en Oncología-Genética</p>
 </div>
-<h1 class="text-7xl xl:text-9xl font-black leading-[0.9] tracking-ultra-tight max-w-4xl scroll-reveal stagger-2">
+<h1 class="text-4xl sm:text-5xl md:text-7xl xl:text-9xl font-black leading-[0.9] tracking-ultra-tight max-w-4xl scroll-reveal stagger-2">
                         Codificando el <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white/10 animate-pulse-text">futuro</span> de la oncología.
                     </h1>
 <div class="glass-panel p-8 max-w-xl border-l-4 border-l-white scroll-reveal stagger-3 hover-glow">
@@ -147,11 +166,11 @@
                         </p>
 </div>
 </div>
-<div class="flex flex-wrap gap-6 scroll-reveal stagger-4">
-<a href="plataforma.html" class="bg-white text-black px-12 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] btn-magnetic btn-ripple animate-pulse-glow">
+<div class="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 scroll-reveal stagger-4">
+<a href="plataforma.html" class="bg-white text-black px-8 md:px-12 py-4 md:py-6 text-[10px] md:text-[11px] font-black uppercase tracking-widest hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] btn-magnetic btn-ripple animate-pulse-glow text-center">
                         Explorar Plataforma
                     </a>
-<a href="contacto.html" class="glass-panel px-12 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all btn-magnetic btn-ripple hover-glow">
+<a href="contacto.html" class="glass-panel px-8 md:px-12 py-4 md:py-6 text-[10px] md:text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all btn-magnetic btn-ripple hover-glow text-center">
                         Agendar Consulta
                     </a>
 </div>
@@ -159,10 +178,10 @@
 </div>
 </section>
 <section class="py-40 bg-black relative border-y border-white/5">
-<div class="max-w-[1440px] mx-auto px-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
 <div class="mb-32 flex flex-col items-center text-center">
 <p class="text-[10px] font-bold tracking-[0.5em] text-white/40 uppercase mb-6 scroll-reveal">Metodología Modular</p>
-<h2 class="text-6xl font-black tracking-ultra-tight mb-8 glow-text scroll-reveal stagger-1">Un ecosistema.<br/>Tres ejes de acción.</h2>
+<h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-ultra-tight mb-8 glow-text scroll-reveal stagger-1">Un ecosistema.<br/>Tres ejes de acción.</h2>
 <div class="h-[1px] w-40 bg-gradient-to-r from-transparent via-white/50 to-transparent scroll-reveal stagger-2"></div>
 </div>
 <div class="grid lg:grid-cols-3 gap-8" data-stagger-children data-stagger-delay="0.15">
@@ -228,7 +247,7 @@
 <div class="h-[1px] w-12 bg-white/30"></div>
 <p class="text-[11px] font-bold tracking-super-wide uppercase text-white/50">Intelligence Core</p>
 </div>
-<h2 class="text-7xl font-black tracking-ultra-tight">
+<h2 class="text-4xl md:text-5xl lg:text-7xl font-black tracking-ultra-tight">
                         Deep-Decoder <span class="neon-glow-white">DNA AI</span>
                     </h2>
 <p class="text-xl text-white/40 font-light leading-relaxed max-w-lg bg-black/40 backdrop-blur-sm p-2 rounded">
@@ -324,9 +343,9 @@
 </div>
 </section>
 <section class="py-40 bg-black relative">
-<div class="max-w-[1440px] mx-auto px-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
 <div class="flex flex-col md:flex-row justify-between items-end mb-32 gap-8">
-<h2 class="text-6xl font-black tracking-ultra-tight max-w-2xl glow-text scroll-reveal">Aliados en la frontera de la ciencia.</h2>
+<h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-ultra-tight max-w-2xl glow-text scroll-reveal">Aliados en la frontera de la ciencia.</h2>
 <div class="max-w-sm">
 <p class="text-white/40 font-light text-lg mb-6">Desarrollamos soluciones específicas para cada actor del ecosistema oncológico.</p>
 <div class="h-1 w-20 bg-white/20"></div>
@@ -369,7 +388,7 @@
 <section class="py-40 bg-[#080808] relative overflow-hidden border-y border-white/5">
 <div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-24 items-center">
 <div class="space-y-12">
-<h2 class="text-5xl lg:text-7xl font-black tracking-ultra-tight leading-[1.1] scroll-reveal">
+<h2 class="text-3xl md:text-5xl lg:text-7xl font-black tracking-ultra-tight leading-[1.1] scroll-reveal">
                     El sesgo de datos es el mayor obstáculo para la <span class="text-white/30 italic">cura global</span>.
                 </h2>
 <p class="text-xl text-white/50 font-light leading-relaxed max-w-xl scroll-reveal stagger-2">
@@ -385,7 +404,7 @@
 <span class="material-symbols-outlined text-[300px] font-thin animate-pulse">public</span>
 </div>
 <div class="relative z-10 space-y-8">
-<span class="text-[180px] font-black tracking-tighter leading-none glow-text block italic opacity-90 scroll-reveal-scale animate-pulse-text">&lt;5%</span>
+<span class="text-7xl sm:text-9xl md:text-[140px] lg:text-[180px] font-black tracking-tighter leading-none glow-text block italic opacity-90 scroll-reveal-scale animate-pulse-text">&lt;5%</span>
 <p class="text-3xl font-light max-w-md mx-auto leading-snug text-white/80">
                         De los datos genómicos globales para fármacos provienen de poblaciones LATAM.
                     </p>
@@ -396,10 +415,10 @@
 </div>
 </div>
 </section>
-<section class="py-64 bg-black text-white text-center relative px-10">
+<section class="py-20 md:py-40 lg:py-64 bg-black text-white text-center relative px-4 md:px-10">
 <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.15)_0%,_transparent_70%)]"></div>
 <div class="max-w-6xl mx-auto z-10 relative">
-<h2 class="text-6xl md:text-9xl font-black leading-[0.9] tracking-ultra-tight glitch-text scroll-reveal animate-glitch-hover">
+<h2 class="text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] tracking-ultra-tight glitch-text scroll-reveal animate-glitch-hover">
                 La cura está escrita en el genoma.<br/>
 <span class="text-white/20">Estamos aquí para decodificarla.</span>
 </h2>
@@ -421,9 +440,9 @@
 </div>
 </div>
 </section>
-<footer class="bg-background-dark border-t border-white/10 py-32 px-10 relative">
-<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20 relative z-10">
-<div class="col-span-1 md:col-span-2 space-y-12">
+<footer class="bg-background-dark border-t border-white/10 py-16 md:py-32 px-4 md:px-10 relative">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-20 relative z-10">
+<div class="col-span-1 sm:col-span-2 space-y-12">
 <a href="index.html" class="flex items-center gap-3 group">
 <div class="relative">
 <img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
@@ -471,4 +490,28 @@
 <script src="assets/js/oncologia-core.js"></script>
 <script src="assets/js/dna-animation.js"></script>
 <script src="assets/js/page-effects.js"></script>
+<script>
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuSpans = mobileMenuBtn.querySelectorAll('span');
+
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+    if (isOpen) {
+        mobileMenu.classList.add('translate-x-full');
+        menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.remove('opacity-0');
+        menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = '';
+    } else {
+        mobileMenu.classList.remove('translate-x-full');
+        menuSpans[0].classList.add('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.add('opacity-0');
+        menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = 'hidden';
+    }
+});
+</script>
 </body></html>

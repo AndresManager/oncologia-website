@@ -88,13 +88,13 @@
 <div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
 <div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
 <header class="fixed top-0 z-50 w-full border-b border-border-futuristic bg-black/40 backdrop-blur-2xl transition-all duration-300">
-<div class="max-w-[1440px] mx-auto px-10 h-24 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-3 group">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 h-20 md:h-24 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 md:gap-3 group">
 <div class="relative">
-<img src="OncologIA.png" alt="OncologIA Logo" class="h-12 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-8 md:h-12 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
 <div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
 </div>
-<h1 class="text-xl font-black tracking-ultra-tight uppercase glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+<h1 class="text-base md:text-xl font-black tracking-ultra-tight uppercase glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
 </a>
 <nav class="hidden lg:flex items-center gap-14">
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:text-white/60 transition-colors hover-underline" href="plataforma.html">Plataforma</a>
@@ -103,10 +103,27 @@
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
 </nav>
-<a href="contacto.html" class="bg-white text-black px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white/90 transition-all btn-magnetic btn-ripple">Contacto</a>
+<div class="flex items-center gap-4">
+<a href="contacto.html" class="hidden md:block bg-white text-black px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white/90 transition-all btn-magnetic btn-ripple">Contacto</a>
+<button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 md:top-24 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 z-40">
+<nav class="flex flex-col items-center justify-center h-full gap-8 pb-20">
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white hover:text-[#00D4FF] transition-colors" href="plataforma.html">Plataforma</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="precision.html">Precision</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="investigacion.html">Research</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="nosotros.html">Nosotros</a>
+<a href="contacto.html" class="mt-8 bg-white text-black px-10 py-4 text-sm font-bold uppercase tracking-[0.3em]">Contacto</a>
+</nav>
 </div>
 </header>
-<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden px-10">
+<section class="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 overflow-hidden px-4 md:px-10">
 <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.05)_0%,_transparent_70%)]"></div>
 <div class="max-w-6xl mx-auto text-center relative z-10 space-y-12">
 <div class="inline-flex items-center gap-4 glass-panel px-6 py-2.5 rounded-full border-white/20 scroll-reveal">
@@ -116,7 +133,7 @@
 </span>
 <p class="text-[11px] font-bold tracking-[0.5em] uppercase text-white">Intelligence Core</p>
 </div>
-<h1 class="text-7xl md:text-9xl font-black tracking-ultra-tight leading-[0.85] scroll-reveal stagger-1">
+<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black tracking-ultra-tight leading-[0.85] scroll-reveal stagger-1">
                 Deep-Decoder<br/>
 <span class="neon-glow-white animate-pulse-text">DNA AI</span>
 </h1>
@@ -137,7 +154,7 @@
 </section>
 <section id="arquitectura" class="py-40 bg-black relative overflow-hidden border-y border-white/5">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,_rgba(255,255,255,0.08)_0%,_transparent_60%)]"></div>
-<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-20 items-center relative z-10">
 <div class="space-y-12 relative z-20">
 <div class="space-y-6">
 <div class="flex items-center gap-4">
@@ -198,7 +215,7 @@
 </div>
 </section>
 <section class="py-40 bg-[#020202] relative overflow-hidden">
-<div class="max-w-[1440px] mx-auto px-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
 <div class="mb-24 flex flex-col items-center text-center">
 <p class="text-[10px] font-bold tracking-[0.5em] text-white/40 uppercase mb-6 scroll-reveal">Workflow E2E</p>
 <h2 class="text-6xl font-black tracking-ultra-tight mb-8 glow-text scroll-reveal stagger-1">Pipeline de Decodificación</h2>
@@ -234,7 +251,7 @@
 </div>
 </section>
 <section class="py-40 bg-black relative">
-<div class="max-w-[1440px] mx-auto px-10">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
 <h2 class="text-5xl font-black tracking-ultra-tight mb-20 glow-text text-center scroll-reveal">Construida para escala y precisión absoluta</h2>
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-stagger-children data-stagger-delay="0.1">
 <div class="glass-panel p-10 space-y-6 cyber-border scroll-reveal hover-lift hover-glow tilt-card">
@@ -435,4 +452,25 @@ Conexión directa con ensayos clínicos activos basados en el perfil molecular d
 <script src="assets/js/oncologia-core.js"></script>
 <script src="assets/js/dna-animation.js"></script>
 <script src="assets/js/page-effects.js"></script>
+<script>
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuSpans = mobileMenuBtn.querySelectorAll('span');
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('translate-x-full');
+    if (isOpen) {
+        mobileMenu.classList.add('translate-x-full');
+        menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.remove('opacity-0');
+        menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = '';
+    } else {
+        mobileMenu.classList.remove('translate-x-full');
+        menuSpans[0].classList.add('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.add('opacity-0');
+        menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = 'hidden';
+    }
+});
+</script>
 </body></html>

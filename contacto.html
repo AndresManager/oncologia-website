@@ -76,13 +76,13 @@
 <div class="fixed inset-0 pointer-events-none scanline z-[99]"></div>
 <div class="fixed inset-0 pointer-events-none grid-overlay z-0"></div>
 <header class="fixed top-0 z-50 w-full border-b border-white/5 bg-black/40 backdrop-blur-2xl transition-all duration-300">
-<div class="max-w-[1440px] mx-auto px-10 h-20 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-3 group">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 md:gap-3 group">
 <div class="relative">
-<img src="OncologIA.png" alt="OncologIA Logo" class="h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
+<img src="OncologIA.png" alt="OncologIA Logo" class="h-8 md:h-10 w-auto filter invert brightness-100 mix-blend-screen transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:scale-105" />
 <div class="absolute inset-0 blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-white"></div>
 </div>
-<h1 class="text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
+<h1 class="text-base md:text-lg uppercase tracking-ultra-tight glow-text">Oncolog<span class="text-[#00D4FF]">IA</span></h1>
 </a>
 <nav class="hidden lg:flex items-center gap-10">
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="plataforma.html">Plataforma</a>
@@ -91,14 +91,33 @@
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="investigacion.html">Research</a>
 <a class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors hover-underline" href="nosotros.html">Nosotros</a>
 </nav>
-<a href="index.html" class="border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Inicio</a>
+<div class="flex items-center gap-4">
+<a href="index.html" class="hidden md:block border border-white/20 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all btn-magnetic btn-ripple">Inicio</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+<span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Panel -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-black/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 z-40">
+<nav class="flex flex-col items-center justify-center h-full gap-8 pb-20">
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="index.html">Inicio</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="plataforma.html">Plataforma</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="descubrimiento.html">Descubrimiento</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="precision.html">Precision</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="investigacion.html">Research</a>
+<a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="nosotros.html">Nosotros</a>
+</nav>
 </div>
 </header>
 <main class="relative z-10 pt-32">
-<section class="max-w-[1440px] mx-auto px-10 py-20 grid lg:grid-cols-[40%_60%] gap-20 items-start">
+<section class="max-w-[1440px] mx-auto px-4 md:px-10 py-10 md:py-20 grid lg:grid-cols-[40%_60%] gap-10 md:gap-20 items-start">
 <div class="space-y-8">
 <span class="inline-block border border-white/20 px-4 py-1 text-[10px] font-black uppercase tracking-[0.4em] bg-white/5 scroll-reveal">Conectemos</span>
-<h1 class="text-6xl md:text-7xl glow-text leading-[1.1] scroll-reveal stagger-1">Hablemos de tu proyecto.</h1>
+<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl glow-text leading-[1.1] scroll-reveal stagger-1">Hablemos de tu proyecto.</h1>
 <p class="text-xl text-white/60 leading-relaxed font-light max-w-md scroll-reveal stagger-2">
                     Inicia una colaboración para acelerar el descubrimiento de fármacos o implementar medicina de precisión en tu institución.
                 </p>
@@ -167,7 +186,7 @@
 </div>
 </section>
 <section class="py-32 bg-black border-y border-white/5">
-<div class="max-w-[1440px] mx-auto px-10 grid lg:grid-cols-2 gap-20 items-center">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-20 items-center">
 <div class="space-y-10 scroll-reveal-left">
 <div class="space-y-4">
 <h2 class="text-5xl glow-text">Medellín, Colombia</h2>
@@ -200,7 +219,7 @@
 </div>
 </section>
 <section class="py-32">
-<div class="max-w-4xl mx-auto px-10">
+<div class="max-w-4xl mx-auto px-4 md:px-10">
 <h2 class="text-4xl mb-16 uppercase tracking-widest text-center scroll-reveal">Preguntas Frecuentes</h2>
 <div class="space-y-4" data-faq-accordion data-stagger-children data-stagger-delay="0.1">
 <details class="group glass-panel cyber-border faq-item scroll-reveal hover-glow">
@@ -252,7 +271,7 @@
 </div>
 </section>
 </main>
-<footer class="bg-background-dark border-t border-white/5 py-24 px-10 relative z-10">
+<footer class="bg-background-dark border-t border-white/5 py-12 md:py-24 px-4 md:px-10 relative z-10">
 <div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-20">
 <div class="col-span-2 space-y-8">
 <a href="index.html" class="flex items-center gap-3 group">
@@ -343,4 +362,28 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 <script src="assets/js/oncologia-core.js"></script>
 <script src="assets/js/dna-animation.js"></script>
 <script src="assets/js/page-effects.js"></script>
+<script>
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuSpans = mobileMenuBtn.querySelectorAll('span');
+
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+    if (isOpen) {
+        mobileMenu.classList.add('translate-x-full');
+        menuSpans[0].classList.remove('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.remove('opacity-0');
+        menuSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = '';
+    } else {
+        mobileMenu.classList.remove('translate-x-full');
+        menuSpans[0].classList.add('rotate-45', 'translate-y-2');
+        menuSpans[1].classList.add('opacity-0');
+        menuSpans[2].classList.add('-rotate-45', '-translate-y-2');
+        document.body.style.overflow = 'hidden';
+    }
+});
+</script>
 </body></html>
