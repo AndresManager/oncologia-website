@@ -110,10 +110,13 @@
 </button>
 </div>
 </div>
-<!-- Mobile Menu Backdrop -->
-<div id="mobile-menu-backdrop" class="lg:hidden fixed inset-0 top-20 md:top-24 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-[100]"></div>
-<!-- Mobile Menu Panel -->
-<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 md:top-24 bg-black transform translate-x-full transition-transform duration-300 z-[110]">
+</header>
+
+<!-- Mobile Menu Backdrop - OUTSIDE HEADER for proper z-index stacking -->
+<div id="mobile-menu-backdrop" class="lg:hidden fixed inset-0 top-20 md:top-24 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-[200]"></div>
+
+<!-- Mobile Menu Panel - OUTSIDE HEADER for proper z-index stacking -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 md:top-24 bg-black transform translate-x-full transition-transform duration-300 z-[210]">
 <nav class="flex flex-col items-center justify-center h-full gap-8 pb-20">
 <a class="text-lg font-bold uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors" href="plataforma.html">Plataforma</a>
 <a class="text-lg font-bold uppercase tracking-[0.3em] text-white hover:text-[#00D4FF] transition-colors" href="descubrimiento.html">Descubrimiento</a>
@@ -123,7 +126,6 @@
 <a href="contacto.html" class="mt-8 bg-white text-black px-10 py-4 text-sm font-bold uppercase tracking-[0.3em]">Contacto</a>
 </nav>
 </div>
-</header>
 <section class="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 px-4 md:px-10">
 <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.05)_0%,_transparent_70%)]"></div>
 <div class="max-w-6xl mx-auto text-center relative z-10 space-y-12">
